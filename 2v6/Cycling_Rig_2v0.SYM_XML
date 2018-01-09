@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<CoDeSysSymbolTable>
+	<SymbolHeader>
+		<Version>-1</Version>
+		<ProjectId>496459</ProjectId>
+		<WorkbenchVersion>2.3.9.26</WorkbenchVersion>
+		<CompilerVersion>2.3.9.26</CompilerVersion>
+	</SymbolHeader>
+	<SymbolTypeList>
+		<TypeSimple TypeId="0" Size="4">REAL</TypeSimple>
+		<TypeUserdef TypeId="1" Size="48">
+			<Name>STCRANKDATA</Name>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="0">rLeftTorque_Nm</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="4">rRightTorque_Nm</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="8">rPosition_deg</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="12">rCadence_degps</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="16">rLeftForce_N</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="20">rRightForce_N</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="24">rCadence_rpm</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="238" Offset="28">rCadence_rad</Var>
+			<Var Type="0" Flags="3" Access="114" RefId="238" Offset="32">rTotalPower_W</Var>
+			<Var Type="0" Flags="3" Access="114" RefId="238" Offset="36">rTotalPowerBalance_pc</Var>
+			<Var Type="0" Flags="3" Access="114" RefId="238" Offset="40">rUsefulPowerBalance_pc</Var>
+			<Var Type="0" Flags="3" Access="114" RefId="238" Offset="44">rWastedPowerBalance_pc</Var>
+		</TypeUserdef>
+		<TypeUserdef TypeId="2" Size="8">
+			<Name>STCRANKENCODERDATA</Name>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="244" Offset="0">rPosition_deg</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="244" Offset="4">rDistance_deg</Var>
+		</TypeUserdef>
+		<TypeSimple TypeId="3" Size="2">INT</TypeSimple>
+		<TypeSimple TypeId="4" Size="1">BOOL</TypeSimple>
+		<TypeString TypeId="5" Size="257"/>
+		<TypeUserdef TypeId="6" Size="262">
+			<Name>MACHINE_CONTROL</Name>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="236" Offset="0">bDatumAllAxes</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="236" Offset="1">bPositionAllAxes</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="236" Offset="2">bResetAllAxes</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="236" Offset="3">bEstopOK</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="236" Offset="4">bAllAxesRequireDatum</Var>
+			<Var Type="5" Flags="1073742083" Access="114" RefId="236" Offset="5">sUserMessage</Var>
+		</TypeUserdef>
+		<TypeUserdef TypeId="7" Size="24">
+			<Name>AXIS_CONTROL</Name>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="0">bEnable</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="1">bManualPositive</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="2">bManualNegative</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="3">bPosExecute</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="4">bHomePosAvailable</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="5">bNegLimitSwPositive</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="233" Offset="8">rActualPosition</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="12">bDriveError</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="13">bDriveIsEnabled</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="14">bResetError</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="15">bHMI_HomeAxis</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="233" Offset="16">rTargetPosition</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="233" Offset="20">bEstopOK</Var>
+		</TypeUserdef>
+		<TypeSimple TypeId="8" Size="1">BYTE</TypeSimple>
+		<TypeUserdef TypeId="9" Size="576">
+			<Name>TORQUE_CONTROL</Name>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="0">bManualNegative</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="1">bManualPositive</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="2">bResetError</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="4">nTargetMotTorque</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="6">nTargetGenTorque</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="8">nTargetSpeed</Var>
+			<Var Type="8" Flags="1073742083" Access="114" RefId="239" Offset="10">byDriveNode</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="11">bTorqueEnabled</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="12">bDriveIsEnabled</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="16">rActualSpeed</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="20">nActualTorque</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="22">bDriveError</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="23">bEstopOK</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="24">bEnableClutchTorque</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="239" Offset="25">bEnableRecording</Var>
+			<Var Type="5" Flags="1073742083" Access="114" RefId="239" Offset="26">sUserFileName</Var>
+			<Var Type="5" Flags="1073742083" Access="114" RefId="239" Offset="283">sUserName</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="540">rCountForFiveMin</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="544">rTimerCount</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="548">rChainRingSize</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="552">rCogSize</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="556">rTransmissionFactor</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="560">rMaxRpmMotorSpeed</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="564">rFactorMaxTorqueAnalogInput</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="239" Offset="568">rFactorScalingC0011</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="572">iSamplingFrequency_Hertz</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="239" Offset="574">iSamplingFrequency_ms</Var>
+		</TypeUserdef>
+		<TypeEnum TypeId="10" Size="2">ECRANKMODES</TypeEnum>
+		<TypeArray TypeId="11" Size="44">
+			<Dimension Lower="0" Upper="10"/>
+			<BaseType>
+				<TypeSimple Size="4">REAL</TypeSimple>
+			</BaseType>
+		</TypeArray>
+		<TypeUserdef TypeId="12" Size="128">
+			<Name>STCRANKCONTROL</Name>
+			<Var Type="10" Flags="1342177539" Access="114" RefId="237" Offset="0">eMode</Var>
+			<Var Type="10" Flags="1342177539" Access="114" RefId="237" Offset="2">eTelemetrySource</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="237" Offset="4">xIncTorqueSelection</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="237" Offset="5">xDecTorqueSelection</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="237" Offset="6">iTorqueSelection</Var>
+			<Var Type="11" Flags="1073742083" Access="114" RefId="237" Offset="8">arSetClosedLoopTorque_Nm</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="237" Offset="52">rSetConstantPower_W</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="237" Offset="56">rPgain</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="237" Offset="60">rIgain</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="237" Offset="64">rDgain</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="237" Offset="68">rFFWGain</Var>
+			<Var Type="4" Flags="3" Access="114" RefId="237" Offset="72">xRegisterCrankEncoder</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="237" Offset="73">xIncPowerSelection</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="237" Offset="74">xDecPowerSelection</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="237" Offset="76">iPowerSelection</Var>
+			<Var Type="11" Flags="1073742083" Access="114" RefId="237" Offset="80">arSetConstantPower_W</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="237" Offset="124">xConstantPowerReached</Var>
+		</TypeUserdef>
+		<TypeUserdef TypeId="13" Size="72">
+			<Name>STUIDATA</Name>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="250" Offset="0">iTorqueAverage</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="250" Offset="4">rCadenceAverage</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="250" Offset="8">rPowerAverage</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="250" Offset="12">iWheelDimention</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="250" Offset="16">rGearRatio</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="250" Offset="20">iSpeed</Var>
+			<Var Type="3" Flags="1073742083" Access="114" RefId="250" Offset="22">iDistance</Var>
+			<Var Type="4" Flags="1073742083" Access="114" RefId="250" Offset="24">xCrank1stScan</Var>
+			<Var Type="11" Flags="3" Access="114" RefId="250" Offset="28">arCogSizes</Var>
+		</TypeUserdef>
+		<TypeUserdef TypeId="14" Size="36">
+			<Name>STPID_VALUES</Name>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="0">rPMin</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="4">rPMax</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="8">rPDef</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="12">rIMin</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="16">rIMax</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="20">RIDef</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="24">rDMin</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="28">rDMax</Var>
+			<Var Type="0" Flags="1073742083" Access="114" RefId="251" Offset="32">rDDef</Var>
+		</TypeUserdef>
+	</SymbolTypeList>
+	<SymbolVarList>
+		<Var Type="3" Flags="33554496" Access="98" RefId="4" Offset="13270">.g_iSetCrankGenTrq_a</Var>
+		<Var Type="3" Flags="33554496" Access="98" RefId="4" Offset="13268">.g_iSetCrankMotTrq_a</Var>
+		<Var Type="3" Flags="33554496" Access="98" RefId="4" Offset="13214">.g_iSetCrankSpeed_a</Var>
+		<Var Type="7" Flags="33554504" Access="98" RefId="3" Offset="264" TopLevelType="7">.g_stBars_X</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="276" TopLevelType="7">.g_stBars_X.bDriveError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="277" TopLevelType="7">.g_stBars_X.bDriveIsEnabled</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="264" TopLevelType="7">.g_stBars_X.bEnable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="284" TopLevelType="7">.g_stBars_X.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="279" TopLevelType="7">.g_stBars_X.bHMI_HomeAxis</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="268" TopLevelType="7">.g_stBars_X.bHomePosAvailable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="266" TopLevelType="7">.g_stBars_X.bManualNegative</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="265" TopLevelType="7">.g_stBars_X.bManualPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="269" TopLevelType="7">.g_stBars_X.bNegLimitSwPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="267" TopLevelType="7">.g_stBars_X.bPosExecute</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="278" TopLevelType="7">.g_stBars_X.bResetError</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="272" TopLevelType="7">.g_stBars_X.rActualPosition</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="280" TopLevelType="7">.g_stBars_X.rTargetPosition</Var>
+		<Var Type="7" Flags="33554504" Access="98" RefId="3" Offset="288" TopLevelType="7">.g_stBars_Y</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="300" TopLevelType="7">.g_stBars_Y.bDriveError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="301" TopLevelType="7">.g_stBars_Y.bDriveIsEnabled</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="288" TopLevelType="7">.g_stBars_Y.bEnable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="308" TopLevelType="7">.g_stBars_Y.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="303" TopLevelType="7">.g_stBars_Y.bHMI_HomeAxis</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="292" TopLevelType="7">.g_stBars_Y.bHomePosAvailable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="290" TopLevelType="7">.g_stBars_Y.bManualNegative</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="289" TopLevelType="7">.g_stBars_Y.bManualPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="293" TopLevelType="7">.g_stBars_Y.bNegLimitSwPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="291" TopLevelType="7">.g_stBars_Y.bPosExecute</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="302" TopLevelType="7">.g_stBars_Y.bResetError</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="296" TopLevelType="7">.g_stBars_Y.rActualPosition</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="304" TopLevelType="7">.g_stBars_Y.rTargetPosition</Var>
+		<Var Type="9" Flags="33554504" Access="98" RefId="3" Offset="360" TopLevelType="9">.g_stCrank</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="382" TopLevelType="9">.g_stCrank.bDriveError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="372" TopLevelType="9">.g_stCrank.bDriveIsEnabled</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="384" TopLevelType="9">.g_stCrank.bEnableClutchTorque</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="385" TopLevelType="9">.g_stCrank.bEnableRecording</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="383" TopLevelType="9">.g_stCrank.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="360" TopLevelType="9">.g_stCrank.bManualNegative</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="361" TopLevelType="9">.g_stCrank.bManualPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="362" TopLevelType="9">.g_stCrank.bResetError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="371" TopLevelType="9">.g_stCrank.bTorqueEnabled</Var>
+		<Var Type="8" Flags="1073741827" Access="98" RefId="3" Offset="370" TopLevelType="9">.g_stCrank.byDriveNode</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="932" TopLevelType="9">.g_stCrank.iSamplingFrequency_Hertz</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="934" TopLevelType="9">.g_stCrank.iSamplingFrequency_ms</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="380" TopLevelType="9">.g_stCrank.nActualTorque</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="366" TopLevelType="9">.g_stCrank.nTargetGenTorque</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="364" TopLevelType="9">.g_stCrank.nTargetMotTorque</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="368" TopLevelType="9">.g_stCrank.nTargetSpeed</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="376" TopLevelType="9">.g_stCrank.rActualSpeed</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="908" TopLevelType="9">.g_stCrank.rChainRingSize</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="912" TopLevelType="9">.g_stCrank.rCogSize</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="900" TopLevelType="9">.g_stCrank.rCountForFiveMin</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="924" TopLevelType="9">.g_stCrank.rFactorMaxTorqueAnalogInput</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="928" TopLevelType="9">.g_stCrank.rFactorScalingC0011</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="920" TopLevelType="9">.g_stCrank.rMaxRpmMotorSpeed</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="904" TopLevelType="9">.g_stCrank.rTimerCount</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="916" TopLevelType="9">.g_stCrank.rTransmissionFactor</Var>
+		<Var Type="5" Flags="1073741827" Access="98" RefId="3" Offset="386" TopLevelType="9">.g_stCrank.sUserFileName</Var>
+		<Var Type="5" Flags="1073741827" Access="98" RefId="3" Offset="643" TopLevelType="9">.g_stCrank.sUserName</Var>
+		<Var Type="12" Flags="33554504" Access="98" RefId="3" Offset="936" TopLevelType="12">.g_stCrankControl</Var>
+		<Var Type="11" Flags="1073741827" Access="98" RefId="3" Offset="944" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="944" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[0]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="984" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[10]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="948" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[1]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="952" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[2]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="956" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[3]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="960" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[4]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="964" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[5]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="968" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[6]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="972" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[7]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="976" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[8]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="980" TopLevelType="12">.g_stCrankControl.arSetClosedLoopTorque_Nm[9]</Var>
+		<Var Type="11" Flags="1073741827" Access="98" RefId="3" Offset="1016" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1016" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[0]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1056" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[10]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1020" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[1]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1024" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[2]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1028" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[3]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1032" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[4]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1036" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[5]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1040" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[6]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1044" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[7]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1048" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[8]</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1052" TopLevelType="12">.g_stCrankControl.arSetConstantPower_W[9]</Var>
+		<Var Type="10" Flags="1342177283" Access="98" RefId="3" Offset="936" TopLevelType="12">.g_stCrankControl.eMode</Var>
+		<Var Type="10" Flags="1342177283" Access="98" RefId="3" Offset="938" TopLevelType="12">.g_stCrankControl.eTelemetrySource</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="1012" TopLevelType="12">.g_stCrankControl.iPowerSelection</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="942" TopLevelType="12">.g_stCrankControl.iTorqueSelection</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1000" TopLevelType="12">.g_stCrankControl.rDgain</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1004" TopLevelType="12">.g_stCrankControl.rFFWGain</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="996" TopLevelType="12">.g_stCrankControl.rIgain</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="992" TopLevelType="12">.g_stCrankControl.rPgain</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="988" TopLevelType="12">.g_stCrankControl.rSetConstantPower_W</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="1060" TopLevelType="12">.g_stCrankControl.xConstantPowerReached</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="1010" TopLevelType="12">.g_stCrankControl.xDecPowerSelection</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="941" TopLevelType="12">.g_stCrankControl.xDecTorqueSelection</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="1009" TopLevelType="12">.g_stCrankControl.xIncPowerSelection</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="940" TopLevelType="12">.g_stCrankControl.xIncTorqueSelection</Var>
+		<Var Type="4" Flags="3" Access="98" RefId="3" Offset="1008" TopLevelType="12">.g_stCrankControl.xRegisterCrankEncoder</Var>
+		<Var Type="1" Flags="33554496" Access="98" RefId="4" Offset="6180" TopLevelType="1">.g_stCrankData</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6192" TopLevelType="1">.g_stCrankData.rCadence_degps</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6208" TopLevelType="1">.g_stCrankData.rCadence_rad</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6204" TopLevelType="1">.g_stCrankData.rCadence_rpm</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6196" TopLevelType="1">.g_stCrankData.rLeftForce_N</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6180" TopLevelType="1">.g_stCrankData.rLeftTorque_Nm</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6188" TopLevelType="1">.g_stCrankData.rPosition_deg</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6200" TopLevelType="1">.g_stCrankData.rRightForce_N</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="6184" TopLevelType="1">.g_stCrankData.rRightTorque_Nm</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="4" Offset="6212" TopLevelType="1">.g_stCrankData.rTotalPower_W</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="4" Offset="6216" TopLevelType="1">.g_stCrankData.rTotalPowerBalance_pc</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="4" Offset="6220" TopLevelType="1">.g_stCrankData.rUsefulPowerBalance_pc</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="4" Offset="6224" TopLevelType="1">.g_stCrankData.rWastedPowerBalance_pc</Var>
+		<Var Type="2" Flags="33554496" Access="98" RefId="4" Offset="29268" TopLevelType="2">.g_stCrankEncoder</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="29272" TopLevelType="2">.g_stCrankEncoder.rDistance_deg</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="4" Offset="29268" TopLevelType="2">.g_stCrankEncoder.rPosition_deg</Var>
+		<Var Type="6" Flags="33554504" Access="98" RefId="3" Offset="0" TopLevelType="6">.g_stMachine</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="4" TopLevelType="6">.g_stMachine.bAllAxesRequireDatum</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="0" TopLevelType="6">.g_stMachine.bDatumAllAxes</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="3" TopLevelType="6">.g_stMachine.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="1" TopLevelType="6">.g_stMachine.bPositionAllAxes</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="2" TopLevelType="6">.g_stMachine.bResetAllAxes</Var>
+		<Var Type="5" Flags="1073741827" Access="98" RefId="3" Offset="5" TopLevelType="6">.g_stMachine.sUserMessage</Var>
+		<Var Type="14" Flags="301989960" Access="98" RefId="3" Offset="1064" TopLevelType="14">.g_stPID_CL</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1096" TopLevelType="14">.g_stPID_CL.rDDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1092" TopLevelType="14">.g_stPID_CL.rDMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1088" TopLevelType="14">.g_stPID_CL.rDMin</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1084" TopLevelType="14">.g_stPID_CL.RIDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1080" TopLevelType="14">.g_stPID_CL.rIMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1076" TopLevelType="14">.g_stPID_CL.rIMin</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1072" TopLevelType="14">.g_stPID_CL.rPDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1068" TopLevelType="14">.g_stPID_CL.rPMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1064" TopLevelType="14">.g_stPID_CL.rPMin</Var>
+		<Var Type="14" Flags="301989960" Access="98" RefId="3" Offset="1100" TopLevelType="14">.g_stPID_CP</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1132" TopLevelType="14">.g_stPID_CP.rDDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1128" TopLevelType="14">.g_stPID_CP.rDMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1124" TopLevelType="14">.g_stPID_CP.rDMin</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1120" TopLevelType="14">.g_stPID_CP.RIDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1116" TopLevelType="14">.g_stPID_CP.rIMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1112" TopLevelType="14">.g_stPID_CP.rIMin</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1108" TopLevelType="14">.g_stPID_CP.rPDef</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1104" TopLevelType="14">.g_stPID_CP.rPMax</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1100" TopLevelType="14">.g_stPID_CP.rPMin</Var>
+		<Var Type="7" Flags="33554504" Access="98" RefId="3" Offset="312" TopLevelType="7">.g_stSaddle_X</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="324" TopLevelType="7">.g_stSaddle_X.bDriveError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="325" TopLevelType="7">.g_stSaddle_X.bDriveIsEnabled</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="312" TopLevelType="7">.g_stSaddle_X.bEnable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="332" TopLevelType="7">.g_stSaddle_X.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="327" TopLevelType="7">.g_stSaddle_X.bHMI_HomeAxis</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="316" TopLevelType="7">.g_stSaddle_X.bHomePosAvailable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="314" TopLevelType="7">.g_stSaddle_X.bManualNegative</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="313" TopLevelType="7">.g_stSaddle_X.bManualPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="317" TopLevelType="7">.g_stSaddle_X.bNegLimitSwPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="315" TopLevelType="7">.g_stSaddle_X.bPosExecute</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="326" TopLevelType="7">.g_stSaddle_X.bResetError</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="320" TopLevelType="7">.g_stSaddle_X.rActualPosition</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="328" TopLevelType="7">.g_stSaddle_X.rTargetPosition</Var>
+		<Var Type="7" Flags="33554504" Access="98" RefId="3" Offset="336" TopLevelType="7">.g_stSaddle_Y</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="348" TopLevelType="7">.g_stSaddle_Y.bDriveError</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="349" TopLevelType="7">.g_stSaddle_Y.bDriveIsEnabled</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="336" TopLevelType="7">.g_stSaddle_Y.bEnable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="356" TopLevelType="7">.g_stSaddle_Y.bEstopOK</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="351" TopLevelType="7">.g_stSaddle_Y.bHMI_HomeAxis</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="340" TopLevelType="7">.g_stSaddle_Y.bHomePosAvailable</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="338" TopLevelType="7">.g_stSaddle_Y.bManualNegative</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="337" TopLevelType="7">.g_stSaddle_Y.bManualPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="341" TopLevelType="7">.g_stSaddle_Y.bNegLimitSwPositive</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="339" TopLevelType="7">.g_stSaddle_Y.bPosExecute</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="350" TopLevelType="7">.g_stSaddle_Y.bResetError</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="344" TopLevelType="7">.g_stSaddle_Y.rActualPosition</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="352" TopLevelType="7">.g_stSaddle_Y.rTargetPosition</Var>
+		<Var Type="13" Flags="33554504" Access="98" RefId="3" Offset="1184" TopLevelType="13">.g_stUIData</Var>
+		<Var Type="11" Flags="3" Access="98" RefId="3" Offset="1212" TopLevelType="13">.g_stUIData.arCogSizes</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1212" TopLevelType="13">.g_stUIData.arCogSizes[0]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1252" TopLevelType="13">.g_stUIData.arCogSizes[10]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1216" TopLevelType="13">.g_stUIData.arCogSizes[1]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1220" TopLevelType="13">.g_stUIData.arCogSizes[2]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1224" TopLevelType="13">.g_stUIData.arCogSizes[3]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1228" TopLevelType="13">.g_stUIData.arCogSizes[4]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1232" TopLevelType="13">.g_stUIData.arCogSizes[5]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1236" TopLevelType="13">.g_stUIData.arCogSizes[6]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1240" TopLevelType="13">.g_stUIData.arCogSizes[7]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1244" TopLevelType="13">.g_stUIData.arCogSizes[8]</Var>
+		<Var Type="0" Flags="3" Access="98" RefId="3" Offset="1248" TopLevelType="13">.g_stUIData.arCogSizes[9]</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="1206" TopLevelType="13">.g_stUIData.iDistance</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="1204" TopLevelType="13">.g_stUIData.iSpeed</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="1184" TopLevelType="13">.g_stUIData.iTorqueAverage</Var>
+		<Var Type="3" Flags="1073741827" Access="98" RefId="3" Offset="1196" TopLevelType="13">.g_stUIData.iWheelDimention</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1188" TopLevelType="13">.g_stUIData.rCadenceAverage</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1200" TopLevelType="13">.g_stUIData.rGearRatio</Var>
+		<Var Type="0" Flags="1073741827" Access="98" RefId="3" Offset="1192" TopLevelType="13">.g_stUIData.rPowerAverage</Var>
+		<Var Type="4" Flags="1073741827" Access="98" RefId="3" Offset="1208" TopLevelType="13">.g_stUIData.xCrank1stScan</Var>
+		<Var Type="4" Flags="33554496" Access="98" RefId="4" Offset="6082">.g_xApplyTorque</Var>
+		<Var Type="4" Flags="33554496" Access="98" RefId="4" Offset="13272">.g_xCrankFwd</Var>
+		<Var Type="4" Flags="33554496" Access="98" RefId="4" Offset="13273">.g_xCrankRev</Var>
+	</SymbolVarList>
+	<SymbolTaskList>
+		<Task Priority="1" Interval="5" Event="" POUIndex="328" ProgramName="PLC_PRG();">NewTask</Task>
+	</SymbolTaskList>
+	<SymbolTargetSettings>
+		<MaxNumberOfPOUs>4096</MaxNumberOfPOUs>
+		<Segments>
+			<Segment Area="0" RefId="0" Address="0" Size="4096" Attributes="0"/>
+			<Segment Area="0" RefId="1" Address="4096" Size="4096" Attributes="0"/>
+			<Segment Area="0" RefId="2" Address="8192" Size="4096" Attributes="0"/>
+			<Segment Area="1" RefId="3" Address="0" Size="1048576" Attributes="2"/>
+			<Segment Area="0" RefId="4" Address="12288" Size="3932160" Attributes="1"/>
+		</Segments>
+	</SymbolTargetSettings>
+</CoDeSysSymbolTable>

@@ -1,0 +1,5 @@
+"		fbGearScaler"    Replaced by	"		fbGearScaler()"          (Crank_Data_Extraction, Line 117, Column 14)
+"		fbUserMsgTimer"  Replaced by	"		fbUserMsgTimer()"        (PLC_PRG, Line 227, Column 16)
+"	fbInPosTimer"     Replaced by	"	fbInPosTimer()"           (Drive_Control_Pos, Line 22, Column 13)
+"Execute_Delay"     Replaced by	"Execute_Delay()"           (Drive_Control_Pos, Line 5, Column 13)
+"Execute_Delay"     Replaced by	"Execute_Delay()"           (Drive_Control_Pos, Line 12, Column 13)
