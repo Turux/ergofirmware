@@ -1,0 +1,25 @@
+08/03/2017 10:33:37: In use: VisiWinNET 6.5 [Compact][SingleCE]
+08/03/2017 10:33:37: File: VisiWinNET.LenzeVariables.Brw.dll 2.0.0.17
+08/03/2017 10:33:37: Assembly: VisiWinNET.LenzeVariables.Brw, Version=1.0.0.0, Culture=neutral, PublicKeyToken=78bbb971d4e4ef61
+08/03/2017 10:33:40: In use: VisiWinNET 6.5 [Compact][SingleCE]
+08/03/2017 10:33:40: File: VisiWinNET.LenzeVariables.Brw.dll 2.0.0.17
+08/03/2017 10:33:40: Assembly: VisiWinNET.LenzeVariables.Brw, Version=1.0.0.0, Culture=neutral, PublicKeyToken=78bbb971d4e4ef61
+08/03/2017 10:34:04: File: VisiWinNET.LenzeVariables.Parse.dll 2.0.0.22
+08/03/2017 10:34:04: Assembly: VisiWinNET.LenzeVariables.Parse, Version=1.0.0.0, Culture=neutral, PublicKeyToken=78bbb971d4e4ef61
+08/03/2017 10:34:04: C:\Users\Public\Documents\Ergo\2v6\Cycling_Rig_2v0.SYM
+08/03/2017 10:34:04: Not in use: ;Version=2
+08/03/2017 10:34:04: Not in use: ;ProjectId=67163
+08/03/2017 10:34:04: Not in use: ;Checksum=0
+08/03/2017 10:34:04: Not in use: ;Filesize=0
+08/03/2017 10:34:04: Not in use: .g_stBars_X:DATA:3:264:24:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stBars_Y:DATA:3:288:24:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stCrank:DATA:3:360:576:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stCrankControl:DATA:3:936:128:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stCrankData:DATA:4:6180:48:b:16#12000040
+08/03/2017 10:34:04: Not in use: .g_stCrankEncoder:DATA:4:29268:8:b:16#12000040
+08/03/2017 10:34:04: Not in use: .g_stMachine:DATA:3:0:262:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stPID_CL:DATA:3:1064:36:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stPID_CP:DATA:3:1100:36:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stSaddle_X:DATA:3:312:24:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stSaddle_Y:DATA:3:336:24:b:16#12000048
+08/03/2017 10:34:04: Not in use: .g_stUIData:DATA:3:1256:72:b:16#12000048

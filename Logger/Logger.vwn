@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisiWinNETProjectFile>
+  <Configuration>
+    <Global DBVersion="6.5.3.0" VisiWinNETVersion="6.5" ProjectName="Logger" ProjectTemplate="CE Single C#" ProductType="Professional" RuntimeType="Compact" ProjectType="SingleCE" DesignerType="C#" DesignerProject="Logger.sln" LCID="1033" UserTemplate="CE Single C#" DateCreated="09/12/2016 10:07:07" DateLastModified="08/03/2017 10:36:14" ProjectVersion="1.0.0.0" Customer="" Developer="" Comment="" />
+    <Settings BlinkCycle="500" NewLimitEvents="1" NewUnitConversion="1" OptimizedItemActivation="1" AdjustIncorrectFormSize="1" />
+    <ServerComponents Alarm="1" Language="1" Recipe="1" UserManager="1" Kernel="1" Trend="1" Logbook="1" />
+    <PowerFailure />
+  </Configuration>
+  <ItemSystem>
+    <Intern>
+      <Items>
+        <Item Name="__CURRENT_USER.NAME" Type="VT_BSTR" Acc="R" Cmt="Client internal system variable: contains the name of the user currently logged on" />
+        <Item Name="__CURRENT_USER.FULLNAME" Type="VT_BSTR" Acc="R" Cmt="Client internal system variable: contains the full name of the user currently logged on" />
+        <Item Name="__CURRENT_USER.GROUPNAME" Type="VT_BSTR" Acc="R" Cmt="Client internal system variable: contains the name of the user group object of the user currently logged on" />
+        <Item Name="__CURRENT_USER.GROUPTEXT" Type="VT_BSTR" Acc="R" Cmt="Client internal system variable: contains the localized name of the user group of the user currently logged on" />
+        <Item Name="__CURRENT_USER.LEVEL" Type="VT_I4" Acc="R" Cmt="Client internal system variable: contains the right level of the user currently logged on (valid only for the level oriented user system)" />
+        <Item Name="__CURRENT_USER.SECONDS_TO_AUTOLOGOFF" Type="VT_I4" Acc="R" Cmt="Client internal system variable: contains the seconds until the automatic log off of the user currently logged on" />
+        <Item Name="__PROCESS.MEMORY.AVAILABLE" Type="VT_R8" Acc="R" Cmt="Client internal system variable: contains the size of the available memory for this process" />
+        <Item Name="__PROCESS.MEMORY.ESTIMATEDMANAGED" Type="VT_R8" Acc="R" Cmt="Client internal system variable: contains the estimated size of the managed memory used by this process" />
+        <Item Name="__PROCESS.MEMORY.USED" Type="VT_R8" Acc="R" Cmt="Client internal system variable: contains the size of the memory used by this process" />
+        <Item Name="__SYSTEM.MEMORY.PERCENTLOAD" Type="VT_R8" Acc="R" Cmt="Client internal system variable: contains the percental memory load" />
+        <Item Name="__SYSTEM.MEMORY.PHYSICAL" Type="VT_R8" Acc="R" Cmt="Client internal system variable: contains the size of available physical memory" />
+        <Item Name="__SYSTEM.TIME" Type="VT_DATE" Cmt="Client internal system variable: contains the current system time" />
+        <Item Name="__SYSTEM_ERRORS.COLLECTIVE" Type="VT_BOOL" Cmt="System variable: Set as collective message when at least one system error is set" />
+        <Item Name="__SYSTEM_ERRORS.DATA_ACCESS" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the variable system" />
+        <Item Name="__SYSTEM_ERRORS.LANGUAGE_SWITCHING" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the language switching" />
+        <Item Name="__SYSTEM_ERRORS.PROJECT" Type="VT_BOOL" Cmt="System variable: Set on a general project error" />
+        <Item Name="__SYSTEM_ERRORS.ALARM" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the alarm management" />
+        <Item Name="__SYSTEM_ERRORS.RECIPE" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the recipe management" />
+        <Item Name="__SYSTEM_ERRORS.USER_MANAGEMENT" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the user management" />
+        <Item Name="__SYSTEM_ERRORS.TREND" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the trending system" />
+        <Item Name="__SYSTEM_ERRORS.LOGGING" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the logbook" />
+        <Item Name="__SYSTEM_ERRORS.FORMS" Type="VT_BOOL" Cmt="System variable: Set when an error occurs within the form management" />
+        <Item Name="__SYSTEM_ERRORS.DRIVERS" Type="VT_BOOL" Cmt="System variable: Set when an error occurs on the connection to a driver" />
+      </Items>
+    </Intern>
+    <Extern>
+      <Channels>
+        <Channel Name="Ch1" Type="Driver" ProgID="CoDeSys" Description="Driver for CoDeSys runtimes">
+          <Configuration>
+            <Global ShowDiagnosticDialog="0" />
+            <CoDeSys>
+              <Line1 Active="1" Port="1200" NETIP="127.0.0.1" PLClocal="1" InitTimeOut="30" />
+              <Line2 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line3 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line4 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line5 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line6 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line7 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line8 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line9 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+              <Line10 Active="0" Port="1200" NETIP="127.0.0.1" PLClocal="0" InitTimeOut="30" />
+            </CoDeSys>
+            <Monitoring Groups="0" Items="0" />
+          </Configuration>
+          <Items>
+            <Item Name="Ergo_PLC.g_stBars_X.bDriveError" ID="L1..g_stBars_X.bDriveError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bDriveIsEnabled" ID="L1..g_stBars_X.bDriveIsEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bEnable" ID="L1..g_stBars_X.bEnable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bEstopOK" ID="L1..g_stBars_X.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bHMI_HomeAxis" ID="L1..g_stBars_X.bHMI_HomeAxis" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bHomePosAvailable" ID="L1..g_stBars_X.bHomePosAvailable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bManualNegative" ID="L1..g_stBars_X.bManualNegative" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bManualPositive" ID="L1..g_stBars_X.bManualPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bNegLimitSwPositive" ID="L1..g_stBars_X.bNegLimitSwPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bPosExecute" ID="L1..g_stBars_X.bPosExecute" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.bResetError" ID="L1..g_stBars_X.bResetError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_X.rActualPosition" ID="L1..g_stBars_X.rActualPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stBars_X.rTargetPosition" ID="L1..g_stBars_X.rTargetPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bDriveError" ID="L1..g_stBars_Y.bDriveError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bDriveIsEnabled" ID="L1..g_stBars_Y.bDriveIsEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bEnable" ID="L1..g_stBars_Y.bEnable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bEstopOK" ID="L1..g_stBars_Y.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bHMI_HomeAxis" ID="L1..g_stBars_Y.bHMI_HomeAxis" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bHomePosAvailable" ID="L1..g_stBars_Y.bHomePosAvailable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bManualNegative" ID="L1..g_stBars_Y.bManualNegative" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bManualPositive" ID="L1..g_stBars_Y.bManualPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bNegLimitSwPositive" ID="L1..g_stBars_Y.bNegLimitSwPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bPosExecute" ID="L1..g_stBars_Y.bPosExecute" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.bResetError" ID="L1..g_stBars_Y.bResetError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stBars_Y.rActualPosition" ID="L1..g_stBars_Y.rActualPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stBars_Y.rTargetPosition" ID="L1..g_stBars_Y.rTargetPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.bDriveError" ID="L1..g_stCrank.bDriveError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bDriveIsEnabled" ID="L1..g_stCrank.bDriveIsEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bEnableClutchTorque" ID="L1..g_stCrank.bEnableClutchTorque" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bEnableRecording" ID="L1..g_stCrank.bEnableRecording" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bEstopOK" ID="L1..g_stCrank.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bManualNegative" ID="L1..g_stCrank.bManualNegative" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bManualPositive" ID="L1..g_stCrank.bManualPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bResetError" ID="L1..g_stCrank.bResetError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.bTorqueEnabled" ID="L1..g_stCrank.bTorqueEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrank.byDriveNode" ID="L1..g_stCrank.byDriveNode" Type="VT_UI1" />
+            <Item Name="Ergo_PLC.g_stCrank.iSamplingFrequency_Hertz" ID="L1..g_stCrank.iSamplingFrequency_Hertz" />
+            <Item Name="Ergo_PLC.g_stCrank.iSamplingFrequency_ms" ID="L1..g_stCrank.iSamplingFrequency_ms" />
+            <Item Name="Ergo_PLC.g_stCrank.nActualTorque" ID="L1..g_stCrank.nActualTorque" />
+            <Item Name="Ergo_PLC.g_stCrank.nTargetGenTorque" ID="L1..g_stCrank.nTargetGenTorque" />
+            <Item Name="Ergo_PLC.g_stCrank.nTargetMotTorque" ID="L1..g_stCrank.nTargetMotTorque" />
+            <Item Name="Ergo_PLC.g_stCrank.nTargetSpeed" ID="L1..g_stCrank.nTargetSpeed" />
+            <Item Name="Ergo_PLC.g_stCrank.rActualSpeed" ID="L1..g_stCrank.rActualSpeed" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rChainRingSize" ID="L1..g_stCrank.rChainRingSize" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rCogSize" ID="L1..g_stCrank.rCogSize" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rCountForFiveMin" ID="L1..g_stCrank.rCountForFiveMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rFactorMaxTorqueAnalogInput" ID="L1..g_stCrank.rFactorMaxTorqueAnalogInput" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rFactorScalingC0011" ID="L1..g_stCrank.rFactorScalingC0011" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rMaxRpmMotorSpeed" ID="L1..g_stCrank.rMaxRpmMotorSpeed" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rTimerCount" ID="L1..g_stCrank.rTimerCount" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.rTransmissionFactor" ID="L1..g_stCrank.rTransmissionFactor" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrank.sUserFileName" ID="L1..g_stCrank.sUserFileName" Type="VT_BSTR" />
+            <Item Name="Ergo_PLC.g_stCrank.sUserName" ID="L1..g_stCrank.sUserName" Type="VT_BSTR" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm" Type="VT_R4" Cnt="11" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[0]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[0]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[1]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[1]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[10]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[10]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[2]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[2]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[3]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[3]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[4]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[4]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[5]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[5]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[6]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[6]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[7]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[7]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[8]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[8]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[9]" ID="L1..g_stCrankControl.arSetClosedLoopTorque_Nm[9]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W" ID="L1..g_stCrankControl.arSetConstantPower_W" Type="VT_R4" Cnt="11" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[0]" ID="L1..g_stCrankControl.arSetConstantPower_W[0]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[1]" ID="L1..g_stCrankControl.arSetConstantPower_W[1]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[10]" ID="L1..g_stCrankControl.arSetConstantPower_W[10]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[2]" ID="L1..g_stCrankControl.arSetConstantPower_W[2]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[3]" ID="L1..g_stCrankControl.arSetConstantPower_W[3]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[4]" ID="L1..g_stCrankControl.arSetConstantPower_W[4]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[5]" ID="L1..g_stCrankControl.arSetConstantPower_W[5]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[6]" ID="L1..g_stCrankControl.arSetConstantPower_W[6]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[7]" ID="L1..g_stCrankControl.arSetConstantPower_W[7]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[8]" ID="L1..g_stCrankControl.arSetConstantPower_W[8]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[9]" ID="L1..g_stCrankControl.arSetConstantPower_W[9]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.eMode" ID="L1..g_stCrankControl.eMode" />
+            <Item Name="Ergo_PLC.g_stCrankControl.eTelemetrySource" ID="L1..g_stCrankControl.eTelemetrySource" />
+            <Item Name="Ergo_PLC.g_stCrankControl.iPowerSelection" ID="L1..g_stCrankControl.iPowerSelection" />
+            <Item Name="Ergo_PLC.g_stCrankControl.iTorqueSelection" ID="L1..g_stCrankControl.iTorqueSelection" />
+            <Item Name="Ergo_PLC.g_stCrankControl.rDgain" ID="L1..g_stCrankControl.rDgain" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.rFFWGain" ID="L1..g_stCrankControl.rFFWGain" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.rIgain" ID="L1..g_stCrankControl.rIgain" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.rPgain" ID="L1..g_stCrankControl.rPgain" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.rSetConstantPower_W" ID="L1..g_stCrankControl.rSetConstantPower_W" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xConstantPowerReached" ID="L1..g_stCrankControl.xConstantPowerReached" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xDecPowerSelection" ID="L1..g_stCrankControl.xDecPowerSelection" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xDecTorqueSelection" ID="L1..g_stCrankControl.xDecTorqueSelection" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xIncPowerSelection" ID="L1..g_stCrankControl.xIncPowerSelection" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xIncTorqueSelection" ID="L1..g_stCrankControl.xIncTorqueSelection" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankControl.xRegisterCrankEncoder" ID="L1..g_stCrankControl.xRegisterCrankEncoder" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankData.rCadence_degps" ID="L1..g_stCrankData.rCadence_degps" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rCadence_rpm" ID="L1..g_stCrankData.rCadence_rpm" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rLeftForce_N" ID="L1..g_stCrankData.rLeftForce_N" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rLeftTorque_Nm" ID="L1..g_stCrankData.rLeftTorque_Nm" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rPosition_deg" ID="L1..g_stCrankData.rPosition_deg" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rRightForce_N" ID="L1..g_stCrankData.rRightForce_N" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rRightTorque_Nm" ID="L1..g_stCrankData.rRightTorque_Nm" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rTotalPower_W" ID="L1..g_stCrankData.rTotalPower_W" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rTotalPowerBalance_pc" ID="L1..g_stCrankData.rTotalPowerBalance_pc" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rUsefulPowerBalance_pc" ID="L1..g_stCrankData.rUsefulPowerBalance_pc" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankData.rWastedPowerBalance_pc" ID="L1..g_stCrankData.rWastedPowerBalance_pc" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankEncoder.rDistance_deg" ID="L1..g_stCrankEncoder.rDistance_deg" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stCrankEncoder.rPosition_deg" ID="L1..g_stCrankEncoder.rPosition_deg" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stMachine.bAllAxesRequireDatum" ID="L1..g_stMachine.bAllAxesRequireDatum" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stMachine.bDatumAllAxes" ID="L1..g_stMachine.bDatumAllAxes" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stMachine.bEstopOK" ID="L1..g_stMachine.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stMachine.bPositionAllAxes" ID="L1..g_stMachine.bPositionAllAxes" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stMachine.bResetAllAxes" ID="L1..g_stMachine.bResetAllAxes" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stMachine.sUserMessage" ID="L1..g_stMachine.sUserMessage" Type="VT_BSTR" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bDriveError" ID="L1..g_stSaddle_X.bDriveError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bDriveIsEnabled" ID="L1..g_stSaddle_X.bDriveIsEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bEnable" ID="L1..g_stSaddle_X.bEnable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bEstopOK" ID="L1..g_stSaddle_X.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bHMI_HomeAxis" ID="L1..g_stSaddle_X.bHMI_HomeAxis" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bHomePosAvailable" ID="L1..g_stSaddle_X.bHomePosAvailable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bManualNegative" ID="L1..g_stSaddle_X.bManualNegative" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bManualPositive" ID="L1..g_stSaddle_X.bManualPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bNegLimitSwPositive" ID="L1..g_stSaddle_X.bNegLimitSwPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bPosExecute" ID="L1..g_stSaddle_X.bPosExecute" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.bResetError" ID="L1..g_stSaddle_X.bResetError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.rActualPosition" ID="L1..g_stSaddle_X.rActualPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stSaddle_X.rTargetPosition" ID="L1..g_stSaddle_X.rTargetPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bDriveError" ID="L1..g_stSaddle_Y.bDriveError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bDriveIsEnabled" ID="L1..g_stSaddle_Y.bDriveIsEnabled" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bEnable" ID="L1..g_stSaddle_Y.bEnable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bEstopOK" ID="L1..g_stSaddle_Y.bEstopOK" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bHMI_HomeAxis" ID="L1..g_stSaddle_Y.bHMI_HomeAxis" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bHomePosAvailable" ID="L1..g_stSaddle_Y.bHomePosAvailable" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bManualNegative" ID="L1..g_stSaddle_Y.bManualNegative" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bManualPositive" ID="L1..g_stSaddle_Y.bManualPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bNegLimitSwPositive" ID="L1..g_stSaddle_Y.bNegLimitSwPositive" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bPosExecute" ID="L1..g_stSaddle_Y.bPosExecute" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.bResetError" ID="L1..g_stSaddle_Y.bResetError" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.rActualPosition" ID="L1..g_stSaddle_Y.rActualPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stSaddle_Y.rTargetPosition" ID="L1..g_stSaddle_Y.rTargetPosition" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_iSetCrankGenTrq_a" ID="L1..g_iSetCrankGenTrq_a" />
+            <Item Name="Ergo_PLC.g_iSetCrankMotTrq_a" ID="L1..g_iSetCrankMotTrq_a" />
+            <Item Name="Ergo_PLC.g_iSetCrankSpeed_a" ID="L1..g_iSetCrankSpeed_a" />
+            <Item Name="Ergo_PLC.g_xApplyTorque" ID="L1..g_xApplyTorque" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_xCrankFwd" ID="L1..g_xCrankFwd" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_xCrankRev" ID="L1..g_xCrankRev" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stCrankData.rCadence_rad" ID="L1..g_stCrankData.rCadence_rad" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes" ID="L1..g_stUIData.arCogSizes" Type="VT_R4" Cnt="11" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[0]" ID="L1..g_stUIData.arCogSizes[0]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[1]" ID="L1..g_stUIData.arCogSizes[1]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[10]" ID="L1..g_stUIData.arCogSizes[10]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[2]" ID="L1..g_stUIData.arCogSizes[2]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[3]" ID="L1..g_stUIData.arCogSizes[3]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[4]" ID="L1..g_stUIData.arCogSizes[4]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[5]" ID="L1..g_stUIData.arCogSizes[5]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[6]" ID="L1..g_stUIData.arCogSizes[6]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[7]" ID="L1..g_stUIData.arCogSizes[7]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[8]" ID="L1..g_stUIData.arCogSizes[8]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.arCogSizes[9]" ID="L1..g_stUIData.arCogSizes[9]" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.iDistance" ID="L1..g_stUIData.iDistance" />
+            <Item Name="Ergo_PLC.g_stUIData.iSpeed" ID="L1..g_stUIData.iSpeed" />
+            <Item Name="Ergo_PLC.g_stUIData.iTorqueAverage" ID="L1..g_stUIData.iTorqueAverage" />
+            <Item Name="Ergo_PLC.g_stUIData.iWheelDimention" ID="L1..g_stUIData.iWheelDimention" />
+            <Item Name="Ergo_PLC.g_stUIData.rCadenceAverage" ID="L1..g_stUIData.rCadenceAverage" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.rGearRatio" ID="L1..g_stUIData.rGearRatio" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.rPowerAverage" ID="L1..g_stUIData.rPowerAverage" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.xCrank1stScan" ID="L1..g_stUIData.xCrank1stScan" Type="VT_BOOL" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rDDef" ID="L1..g_stPID_CL.rDDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rDMax" ID="L1..g_stPID_CL.rDMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rDMin" ID="L1..g_stPID_CL.rDMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.RIDef" ID="L1..g_stPID_CL.RIDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rIMax" ID="L1..g_stPID_CL.rIMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rIMin" ID="L1..g_stPID_CL.rIMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rPDef" ID="L1..g_stPID_CL.rPDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rPMax" ID="L1..g_stPID_CL.rPMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CL.rPMin" ID="L1..g_stPID_CL.rPMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rDDef" ID="L1..g_stPID_CP.rDDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rDMax" ID="L1..g_stPID_CP.rDMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rDMin" ID="L1..g_stPID_CP.rDMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.RIDef" ID="L1..g_stPID_CP.RIDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rIMax" ID="L1..g_stPID_CP.rIMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rIMin" ID="L1..g_stPID_CP.rIMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rPDef" ID="L1..g_stPID_CP.rPDef" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rPMax" ID="L1..g_stPID_CP.rPMax" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stPID_CP.rPMin" ID="L1..g_stPID_CP.rPMin" Type="VT_R4" />
+            <Item Name="Ergo_PLC.g_stUIData.xGeometryTest" ID="L1..g_stUIData.xGeometryTest" Type="VT_BOOL" />
+          </Items>
+        </Channel>
+      </Channels>
+    </Extern>
+    <Groups>
+      <Group Name="Standard" Cmt="All variables are related automatically first to this group. The group cannot be removed." />
+    </Groups>
+    <UnitClasses>
+      <Process>
+        <UnitClass Name="LenzeFix32" Cmt="Process conversion for Integer variables, e.g.: 12345 (integer within PLC) is converted to 12345 (double within VisiWinNET)">
+          <Units>
+            <Unit SwitchID="0" x2="10000" />
+          </Units>
+        </UnitClass>
+        <UnitClass Name="LenzeFix32_1Decpoints" Cmt="Process conversion for Integer variables, e.g.: 12345 (integer within PLC) is converted to 1234.5 (double within VisiWinNET)">
+          <Units>
+            <Unit SwitchID="0" DecPoint="1" x2="1000" />
+          </Units>
+        </UnitClass>
+        <UnitClass Name="LenzeFix32_2Decpoints" Cmt="Process conversion for Integer variables, e.g.: 12345 (integer within PLC) is converted to 123.45 (double within VisiWinNET)">
+          <Units>
+            <Unit SwitchID="0" DecPoint="2" x2="100" />
+          </Units>
+        </UnitClass>
+        <UnitClass Name="LenzeFix32_3Decpoints" Cmt="Process conversion for Integer variables, e.g.: 12345 (integer within PLC) is converted to 12.345 (double within VisiWinNET)">
+          <Units>
+            <Unit SwitchID="0" DecPoint="3" x2="10" />
+          </Units>
+        </UnitClass>
+        <UnitClass Name="LenzeFix32_4Decpoints" Cmt="Process conversion for Integer variables, e.g.: 12345 (integer within PLC) is converted to 1.2345 (double within VisiWinNET)">
+          <Units>
+            <Unit SwitchID="0" DecPoint="4" />
+          </Units>
+        </UnitClass>
+      </Process>
+      <Display />
+    </UnitClasses>
+    <Multiplexers />
+  </ItemSystem>
+  <AlarmSystem>
+    <Settings />
+    <Classes>
+      <Class Name="SystemAlarm" Ack="0" Cmt="Alarm of the VisiWinNET runtime system not to be acknowledged, resetable" />
+      <Class Name="Alarm" SngAck="-1" Save="-1" Cmt="Self defined alarm to be acknowledged" />
+      <Class Name="Message" SngAck="-1" Save="-1" Cmt="Self defined message to be acknowledged" />
+      <Class Name="Hint" Ack="3" Cmt="Self defined hint not to be acknowledged, resetable" FrClrActive="0" BkClrActive="65535" />
+    </Classes>
+    <Types>
+      <ValueAlarms />
+      <BitBlockAlarms />
+    </Types>
+    <Groups>
+      <Group Name="SystemAlarms" Cmt="Alarms of the VisiWinNET runtime system">
+        <Alarms>
+          <Alarm Name="Collective" ItmEvt="__SYSTEM_ERRORS.COLLECTIVE" Cls="SystemAlarm" Cmt="Collective error VisiWinNET runtime system" />
+          <Alarm Name="DataAccess" ItmEvt="__SYSTEM_ERRORS.DATA_ACCESS" Cls="SystemAlarm" Cmt="Error in opc client, driver or data access" />
+          <Alarm Name="LanguageSwitching" ItmEvt="__SYSTEM_ERRORS.LANGUAGE_SWITCHING" Cls="SystemAlarm" Cmt="Error in language switching" />
+          <Alarm Name="Project" ItmEvt="__SYSTEM_ERRORS.PROJECT" Cls="SystemAlarm" Cmt="Error in project management" />
+          <Alarm Name="Alarm" ItmEvt="__SYSTEM_ERRORS.ALARM" Cls="SystemAlarm" Cmt="Error in alarm management" />
+          <Alarm Name="Recipe" ItmEvt="__SYSTEM_ERRORS.RECIPE" Cls="SystemAlarm" Cmt="Error in recipe management" />
+          <Alarm Name="UserManagement" ItmEvt="__SYSTEM_ERRORS.USER_MANAGEMENT" Cls="SystemAlarm" Cmt="Error in user management" />
+          <Alarm Name="Trend" ItmEvt="__SYSTEM_ERRORS.TREND" Cls="SystemAlarm" Cmt="Error in trend system" />
+          <Alarm Name="Logging" ItmEvt="__SYSTEM_ERRORS.LOGGING" Cls="SystemAlarm" Cmt="Error in logging system" />
+          <Alarm Name="Forms" ItmEvt="__SYSTEM_ERRORS.FORMS" Cls="SystemAlarm" Cmt="Error in project forms" />
+          <Alarm Name="Drivers" ItmEvt="__SYSTEM_ERRORS.DRIVERS" Cls="SystemAlarm" Cmt="VisiWinNET driver error" />
+        </Alarms>
+      </Group>
+    </Groups>
+  </AlarmSystem>
+  <RecipeSystem>
+    <Recipes />
+  </RecipeSystem>
+  <UserSystem>
+    <Settings />
+    <PasswordPolicies />
+    <UserPolicies />
+    <UserGroups />
+    <Rights />
+    <BadPassWords />
+  </UserSystem>
+  <ArchiveSystem>
+    <Settings />
+    <Archives />
+  </ArchiveSystem>
+  <LoggingSystem>
+    <Settings />
+    <Categories>
+      <Category Name="Project" Cmt="System category with common project related events">
+        <Events>
+          <Event Name="Start" Cmt="System event: Project startet">
+            <Params>
+              <Param Name="ProjectName" Idx="1" Cmt="Name of the project" />
+              <Param Name="Success" Idx="2" Cmt="Success of the start: 0 or 1" />
+            </Params>
+          </Event>
+          <Event Name="Stop" Cmt="System event: Project shut down">
+            <Params>
+              <Param Name="ProjectName" Idx="1" Cmt="Name of the project" />
+            </Params>
+          </Event>
+        </Events>
+      </Category>
+      <Category Name="UserSystem" Cmt="System category with events of the user management">
+        <Events>
+          <Event Name="LogOn" Cmt="System event: User has logged on">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="GroupName" Idx="3" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="4" Cmt="Group name" />
+            </Params>
+          </Event>
+          <Event Name="LogOff" Cmt="System event: User has logged off">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+            </Params>
+          </Event>
+          <Event Name="AutoLogOff" Cmt="System event: User has been logged off by the system">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+            </Params>
+          </Event>
+          <Event Name="VerifyUser" Cmt="System event: User has been verified">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="GroupName" Idx="3" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="4" Cmt="Group name" />
+            </Params>
+          </Event>
+          <Event Name="AddUser" Cmt="System event: New user has been added">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="GroupName" Idx="3" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="4" Cmt="Group name" />
+            </Params>
+          </Event>
+          <Event Name="RemoveUser" Cmt="System event: User has been removed">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="GroupName" Idx="3" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="4" Cmt="Group name" />
+            </Params>
+          </Event>
+          <Event Name="ChangeUser" Cmt="System event: User has been assigned to another user group">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="PrevGroupName" Idx="3" Cmt="Previous: Name of the group object" />
+              <Param Name="PrevGroupText" Idx="4" Cmt="Previous: Group name" />
+              <Param Name="NewGroupName" Idx="5" Cmt="New: Name of the group object" />
+              <Param Name="NewGroupText" Idx="6" Cmt="New: Group name" />
+            </Params>
+          </Event>
+          <Event Name="ChangeUserState" Cmt="System event: User state has been changed">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+              <Param Name="PreviousState" Idx="3" Cmt="Previous: State (identifier)" />
+              <Param Name="NewState" Idx="4" Cmt="New: State (identifier)" />
+              <Param Name="PreviousStateText" Idx="5" Source="Dialogs.UserManagement.UserStates" Type="3" Cmt="Previous: State (text)" />
+              <Param Name="NewStateText" Idx="6" Source="Dialogs.UserManagement.UserStates" Type="3" Cmt="New: State (text)" />
+            </Params>
+          </Event>
+          <Event Name="ChangeUserPolicy" Cmt="System event: User policies have been changed">
+            <Params>
+              <Param Name="PrevMinimumLength" Idx="1" Cmt="Previous: Minimal length" />
+              <Param Name="NewMinimumLength" Idx="2" Cmt="New: Minimal length" />
+              <Param Name="PrevMaximumLength" Idx="3" Cmt="Previous: Maximal length" />
+              <Param Name="NewMaximumLength" Idx="4" Cmt="New: Maximal length" />
+            </Params>
+          </Event>
+          <Event Name="ChangePassword" Cmt="System event: Password has been changed">
+            <Params>
+              <Param Name="User" Idx="1" Cmt="User name" />
+              <Param Name="FullName" Idx="2" Cmt="Full user name" />
+            </Params>
+          </Event>
+          <Event Name="ChangePasswordPolicy" Cmt="System event: Password policies have been changed">
+            <Params>
+              <Param Name="PrevMinimumLength" Idx="1" Cmt="Previous: Minimal length" />
+              <Param Name="NewMinimumLength" Idx="2" Cmt="New: Minimal length" />
+              <Param Name="PrevMaximumLength" Idx="3" Cmt="Previous: Maximal length" />
+              <Param Name="NewMaximumLength" Idx="4" Cmt="New: Maximal length" />
+              <Param Name="NewMustContainLetters" Idx="5" Cmt="New: Must contain letters" />
+              <Param Name="NewMustContainDigits" Idx="6" Cmt="New: Must contain digits" />
+              <Param Name="NewMustContainSpecialCharacters" Idx="7" Cmt="New: Must contain special characters" />
+              <Param Name="NewMustContainUpperandLowerCase" Idx="8" Cmt="New: Must contain upper and lower case" />
+              <Param Name="PrevMaximumSubsequentEqualChars" Idx="9" Cmt="Previous: Maximum subsequent equal characters" />
+              <Param Name="NewMaximumSubsequentEqualChars" Idx="10" Cmt="New: Maximum subsequent equal characters" />
+              <Param Name="PrevMinimumDifferentChars" Idx="11" Cmt="Previous: Minimal different characters" />
+              <Param Name="NewMinimumDifferentChars" Idx="12" Cmt="New: Minimal different characters" />
+              <Param Name="PrevMinimumDiffCharsToPriorPW" Idx="13" Cmt="Previous: Minimal different characters to previous password" />
+              <Param Name="NewMinimumDiffCharsToPriorPW" Idx="14" Cmt="New: Minimal different characters to previous password" />
+              <Param Name="PrevPasswordAgingCount" Idx="15" Cmt="Previous: Changes until password reusable" />
+              <Param Name="NewPasswordAgingCount" Idx="16" Cmt="New: Changes until password reusable" />
+              <Param Name="PrevPasswordAgingTime" Idx="17" Cmt="Previous: Period until password reusable" />
+              <Param Name="NewPasswordAgingTime" Idx="18" Cmt="New: Period until password reusable" />
+              <Param Name="PrevForbiddenPasswords" Idx="19" Cmt="Previous: Forbidden passwords" />
+              <Param Name="NewForbiddenPasswords" Idx="20" Cmt="New: Forbidden passwords" />
+              <Param Name="NewUserNameUnequalPassword" Idx="21" Cmt="New: Password unequal user name" />
+            </Params>
+          </Event>
+          <Event Name="AddGroup" Cmt="System event: New user group has been added">
+            <Params>
+              <Param Name="GroupName" Idx="1" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="2" Cmt="Group name" />
+              <Param Name="Rights" Idx="3" Cmt="Rights" />
+              <Param Name="UsersRemovable" Idx="4" Cmt="Users removable" />
+              <Param Name="AutoLogOffTime" Idx="5" Cmt="Time until automatic log off" />
+              <Param Name="RenewPasswordInterval" Idx="6" Cmt="Password validity period" />
+              <Param Name="RenewPasswordHintTime" Idx="7" Cmt="Hint period before password expires" />
+              <Param Name="MaxFailedLogOns" Idx="8" Cmt="Maximum log on failures" />
+              <Param Name="UserExclusionTime" Idx="9" Cmt="Period of user exclusion" />
+              <Param Name="ExcludeInactiveUserTime" Idx="10" Cmt="Period until exclusion of a non used user" />
+              <Param Name="ProposeLastUserTime" Idx="11" Cmt="Period for proposition of last user" />
+              <Param Name="MinimumPasswordAge" Idx="12" Cmt="Minimum password age" />
+            </Params>
+          </Event>
+          <Event Name="ChangeGroup" Cmt="System event: User group settings have been changed">
+            <Params>
+              <Param Name="GroupName" Idx="1" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="2" Cmt="Group name" />
+              <Param Name="PrevRights" Idx="3" Cmt="Previous: Rights" />
+              <Param Name="NewRights" Idx="4" Cmt="New: Rights" />
+              <Param Name="NewUsersRemovable" Idx="5" Cmt="New: Users removable" />
+              <Param Name="PrevAutoLogOffTime" Idx="6" Cmt="Previous: Time until automatic log off" />
+              <Param Name="NewAutoLogOffTime" Idx="7" Cmt="New: Time until automatic log off" />
+              <Param Name="PrevRenewPasswordInterval" Idx="8" Cmt="Previous: Password validity period" />
+              <Param Name="NewRenewPasswordInterval" Idx="9" Cmt="New: Password validity period" />
+              <Param Name="PrevRenewPasswordHintTime" Idx="10" Cmt="Previous: Hint period before password expires" />
+              <Param Name="NewRenewPasswordHintTime" Idx="11" Cmt="New: Hint period before password expires" />
+              <Param Name="PrevMaxFailedLogOns" Idx="12" Cmt="Previous: Maximum log on failures" />
+              <Param Name="NewMaxFailedLogOns" Idx="13" Cmt="New: Maximum log on failures" />
+              <Param Name="PrevUserExclusionTime" Idx="14" Cmt="Previous: Period of user exclusion" />
+              <Param Name="NewUserExclusionTime" Idx="15" Cmt="New: Period of user exclusion" />
+              <Param Name="PrevExcludeInactiveUserTime" Idx="16" Cmt="Previous: Period until exclusion of a non used user" />
+              <Param Name="NewExcludeInactiveUserTime" Idx="17" Cmt="New: Period until exclusion of a non used user" />
+              <Param Name="PrevProposeLastUserTime" Idx="18" Cmt="Previous: Period for proposition of last user" />
+              <Param Name="NewProposeLastUserTime" Idx="19" Cmt="New: Period for proposition of last user" />
+              <Param Name="PrevMinimumPasswordAge" Idx="20" Cmt="Previous: Minimum password age" />
+              <Param Name="NewMinimumPasswordAge" Idx="21" Cmt="New: Minimum password age" />
+            </Params>
+          </Event>
+          <Event Name="RemoveGroup" Cmt="System event: User group has been removed">
+            <Params>
+              <Param Name="GroupName" Idx="1" Cmt="Name of the group object" />
+              <Param Name="GroupText" Idx="2" Cmt="Group name" />
+            </Params>
+          </Event>
+          <Event Name="AddRight" Cmt="System event: New right has been added">
+            <Params>
+              <Param Name="RightName" Idx="1" Cmt="Name of the right object" />
+              <Param Name="RightText" Idx="2" Cmt="Right name" />
+            </Params>
+          </Event>
+          <Event Name="RemoveRight" Cmt="System event: Right has been removed">
+            <Params>
+              <Param Name="RightName" Idx="1" Cmt="Name of the right object" />
+              <Param Name="RightText" Idx="2" Cmt="Right name" />
+            </Params>
+          </Event>
+          <Event Name="ActivateRight" Cmt="System event: Right has been activated">
+            <Params>
+              <Param Name="RightName" Idx="1" Cmt="Name of the right object" />
+              <Param Name="RightText" Idx="2" Cmt="Right name" />
+            </Params>
+          </Event>
+          <Event Name="DeactivateRight" Cmt="System event: Right has been deactivated">
+            <Params>
+              <Param Name="RightName" Idx="1" Cmt="Name of the right object" />
+              <Param Name="RightText" Idx="2" Cmt="Right name" />
+            </Params>
+          </Event>
+        </Events>
+      </Category>
+    </Categories>
+  </LoggingSystem>
+  <LanguageSwitching>
+    <Configuration>
+      <Languages>
+        <Language LCID="1031" />
+        <Language LCID="1033" />
+      </Languages>
+    </Configuration>
+    <TextSystem>
+      <Group Name="Application" />
+      <Group Name="Components">
+        <Groups>
+          <Group Name="AlarmLine">
+            <Texts>
+              <Text Name="AcknowledgeTime" Descr="Caption of the column 'AcknowledgeTime'" />
+              <Text Name="ActivationCounter" Descr="Caption of the column 'ActivationCounter'" />
+              <Text Name="ActivationTime" Descr="Caption of the column 'ActivationTime'" />
+              <Text Name="Class" Descr="Caption of the column 'Class'" />
+              <Text Name="Count" Descr="Caption of the column 'Count'" />
+              <Text Name="DeactivationTime" Descr="Caption of the column 'DeactivationTime'" />
+              <Text Name="Group" Descr="Caption of the column 'Group'" />
+              <Text Name="Param1" Descr="Caption of the column 'Param1'" />
+              <Text Name="Param2" Descr="Caption of the column 'Param2'" />
+              <Text Name="Priority" Descr="Caption of the column 'Priority'" />
+              <Text Name="State" Descr="Caption of the column 'State'" />
+              <Text Name="Symbol" Descr="Caption of the column 'Symbol'" />
+              <Text Name="Text" Descr="Caption of the column 'Alarm text'" />
+              <Text Name="Machine" Descr="Caption of the column 'Machine'" />
+              <Text Name="User" Descr="Caption of the column 'User'" />
+            </Texts>
+          </Group>
+          <Group Name="AlarmList">
+            <Texts>
+              <Text Name="AcknowledgeTime" Descr="Caption of the column 'AcknowledgeTime'" />
+              <Text Name="ActivationCounter" Descr="Caption of the column 'ActivationCounter'" />
+              <Text Name="ActivationTime" Descr="Caption of the column 'ActivationTime'" />
+              <Text Name="Class" Descr="Caption of the column 'Class'" />
+              <Text Name="Count" Descr="Caption of the column 'Count'" />
+              <Text Name="DeactivationTime" Descr="Caption of the column 'DeactivationTime'" />
+              <Text Name="Group" Descr="Caption of the column 'Group'" />
+              <Text Name="Param1" Descr="Caption of the column 'Param1'" />
+              <Text Name="Param2" Descr="Caption of the column 'Param2'" />
+              <Text Name="Priority" Descr="Caption of the column 'Priority'" />
+              <Text Name="State" Descr="Caption of the column 'State'" />
+              <Text Name="Symbol" Descr="Caption of the column 'Symbol'" />
+              <Text Name="Text" Descr="Caption of the column 'Alarm text'" />
+              <Text Name="Machine" Descr="Caption of the column 'Machine'" />
+              <Text Name="User" Descr="Caption of the column 'User'" />
+              <Text Name="NotesCount" Descr="Caption of the column 'NotesCount'" />
+              <Text Name="FileName" Descr="Caption of the column 'FileName'" />
+            </Texts>
+          </Group>
+          <Group Name="PopupInfo">
+            <Texts>
+              <Text Name="Caption" Descr="Info for @1s@" />
+              <Text Name="LimitMax" Descr="Upper limit" />
+              <Text Name="LimitMin" Descr="Lower limit" />
+              <Text Name="Default" Descr="Default" />
+              <Text Name="Alias" Descr="Alias" />
+              <Text Name="ID" Descr="ID" />
+            </Texts>
+          </Group>
+          <Group Name="RecipeList">
+            <Texts>
+              <Text Name="FileName" Descr="Caption of the column 'FileName' (Recipe name)" />
+              <Text Name="FileDescription" Descr="Caption of the column 'FileDescription' (Description)" />
+              <Text Name="FileChangedBy" Descr="Caption of the column 'FileChangedBy' (changed by [user name])" />
+              <Text Name="FileChangedAt" Descr="Caption of the column 'FileChangedAt' (Date of change)" />
+              <Text Name="FileChangesCount" Descr="Caption of the column 'FileChangesCount' (Count of changes)" />
+              <Text Name="FileNotesCount" Descr="Caption of the column 'FileNotesCount' (Count of notes)" />
+              <Text Name="ItemAlias" Descr="Caption of the column 'ItemAlias' (Variable alias)" />
+              <Text Name="ItemText" Descr="Caption of the column 'ItemText' (Variable label)" />
+              <Text Name="ItemValue" Descr="Caption of the column 'ItemValue' (Variable value)" />
+              <Text Name="ItemUnit" Descr="Caption of the column 'ItemUnit' (Unit)" />
+              <Text Name="ItemMinValue" Descr="Caption of the column 'ItemMinValue' (Minimum)" />
+              <Text Name="ItemMaxValue" Descr="Caption of the column 'ItemMaxValue' (Maximum)" />
+              <Text Name="ItemDefaultValue" Descr="Caption of the column 'ItemDefaultValue' (Default value)" />
+            </Texts>
+          </Group>
+          <Group Name="Time">
+            <Groups>
+              <Group Name="DateFormats">
+                <Texts>
+                  <Text Name="LongDate" Descr="MM/dd/yyyy" />
+                  <Text Name="ShortDate" Descr="MM/dd/yy" />
+                  <Text Name="NamedLongDate" Descr="dddd, MMMM d, yyyy" />
+                  <Text Name="NamedShortDate" Descr="ddd, MMM d, yy" />
+                  <Text Name="UserDefinedDate" Descr="User defined formatting instruction" />
+                </Texts>
+              </Group>
+              <Group Name="MonthName">
+                <Texts>
+                  <Text Name="1" Descr="Labelling of the 1. Month (January)" />
+                  <Text Name="2" Descr="Labelling of the 2. Month (February)" />
+                  <Text Name="3" Descr="Labelling of the 3. Month (March)" />
+                  <Text Name="4" Descr="Labelling of the 4. Month (April)" />
+                  <Text Name="5" Descr="Labelling of the 5. Month (May)" />
+                  <Text Name="6" Descr="Labelling of the 6. Month (June)" />
+                  <Text Name="7" Descr="Labelling of the 7. Month (July)" />
+                  <Text Name="8" Descr="Labelling of the 8. Month (August)" />
+                  <Text Name="9" Descr="Labelling of the 9. Month (September)" />
+                  <Text Name="10" Descr="Labelling of the 10. Month (October)" />
+                  <Text Name="11" Descr="Labelling of the 11. Month (November)" />
+                  <Text Name="12" Descr="Labelling of the 12. Month (December)" />
+                </Texts>
+              </Group>
+              <Group Name="ShortMonthName">
+                <Texts>
+                  <Text Name="1" Descr="Abbreviated labelling of the 1. Month (January)" />
+                  <Text Name="2" Descr="Abbreviated labelling of the 2. Month (February)" />
+                  <Text Name="3" Descr="Abbreviated labelling of the 3. Month (March)" />
+                  <Text Name="4" Descr="Abbreviated labelling of the 4. Month (April)" />
+                  <Text Name="5" Descr="Abbreviated labelling of the 5. Month (May)" />
+                  <Text Name="6" Descr="Abbreviated labelling of the 6. Month (June)" />
+                  <Text Name="7" Descr="Abbreviated labelling of the 7. Month (July)" />
+                  <Text Name="8" Descr="Abbreviated labelling of the 8. Month (August)" />
+                  <Text Name="9" Descr="Abbreviated labelling of the 9. Month (September)" />
+                  <Text Name="10" Descr="Abbreviated labelling of the 10. Month (October)" />
+                  <Text Name="11" Descr="Abbreviated labelling of the 11. Month (November)" />
+                  <Text Name="12" Descr="Abbreviated labelling of the 12. Month (December)" />
+                </Texts>
+              </Group>
+              <Group Name="ShortWeekdayName">
+                <Texts>
+                  <Text Name="1" Descr="Abbreviated labelling of the 1. day of week (Sunday)" />
+                  <Text Name="2" Descr="Abbreviated labelling of the 2. day of week (Monday)" />
+                  <Text Name="3" Descr="Abbreviated labelling of the 3. day of week (Tuesday)" />
+                  <Text Name="4" Descr="Abbreviated labelling of the 4. day of week (Wednesday)" />
+                  <Text Name="5" Descr="Abbreviated labelling of the 5. day of week (Thursday)" />
+                  <Text Name="6" Descr="Abbreviated labelling of the 6. day of week (Friday)" />
+                  <Text Name="7" Descr="Abbreviated labelling of the 7. day of week (Saturday)" />
+                </Texts>
+              </Group>
+              <Group Name="TimeFormats">
+                <Texts>
+                  <Text Name="LongTime" Descr="hh:mm:ss tt" />
+                  <Text Name="ShortTime" Descr="hh:mm tt" />
+                  <Text Name="UserDefinedTime" Descr="h:m t" />
+                </Texts>
+              </Group>
+              <Group Name="WeekdayName">
+                <Texts>
+                  <Text Name="1" Descr="Labelling of the 1. day of week (Sunday)" />
+                  <Text Name="2" Descr="Labelling of the 2. day of week (Monday)" />
+                  <Text Name="3" Descr="Labelling of the 3. day of week (Tuesday)" />
+                  <Text Name="4" Descr="Labelling of the 4. day of week (Wednesday)" />
+                  <Text Name="5" Descr="Labelling of the 5. day of week (Thursday)" />
+                  <Text Name="6" Descr="Labelling of the 6. day of week (Friday)" />
+                  <Text Name="7" Descr="Labelling of the 7. day of week (Saturday)" />
+                </Texts>
+              </Group>
+            </Groups>
+            <Texts>
+              <Text Name="FirstDayOfWeek" Descr="Number of the first day of the week (see Components.Time.WeekdayName)" />
+              <Text Name="FirstWeekOfYear" Descr="Identification of the first week of the year: 1=week contains january 1, 2=week contains at least 4 days of january, 3=week contains only days of january" />
+              <Text Name="WeekNumberLong" Descr="Labelling of 'calendar week' / 'number of week' (complete word)" />
+              <Text Name="WeekNumberShort" Descr="Labelling of 'calendar week' / 'number of week' (abbreviation)" />
+            </Texts>
+          </Group>
+          <Group Name="TrendLegend">
+            <Texts>
+              <Text Name="ArchiveText" Descr="Caption of the column 'ArchiveText' (Archive name)" />
+              <Text Name="Color" Descr="Caption of the column 'Color' (Color)" />
+              <Text Name="ItemText" Descr="Caption of the column 'ItemText' (Variable labelling)" />
+              <Text Name="MarkedValue" Descr="Caption of the column 'MarkedValue' (Marked value)" />
+              <Text Name="Maximum" Descr="Caption of the column 'Maximum' (Maximum of the scale)" />
+              <Text Name="Minimum" Descr="Caption of the column 'Minimum' (Minimum of the scale)" />
+              <Text Name="Style" Descr="Caption of the column 'Style' (Line style)" />
+              <Text Name="TrendText" Descr="Caption of the column 'TrendText' (Trend name)" />
+              <Text Name="Unit" Descr="Caption of the column 'Unit' (Unit)" />
+              <Text Name="ItemAlias" Descr="Caption of the column 'ItemAlias' (Variable alias)" />
+            </Texts>
+          </Group>
+        </Groups>
+      </Group>
+      <Group Name="Dialogs">
+        <Groups>
+          <Group Name="Common">
+            <Texts>
+              <Text Name="cmdOK" Descr="Command button labelling" />
+              <Text Name="cmdCancel" Descr="Command button labelling" />
+              <Text Name="cmdClose" Descr="Command button labelling" />
+              <Text Name="cmdYes" Descr="Command button labelling" />
+              <Text Name="cmdNo" Descr="Command button labelling" />
+              <Text Name="cmdAdd" Descr="Command button labelling" />
+              <Text Name="cmdRemove" Descr="Command button labelling" />
+              <Text Name="cmdEdit" Descr="Command button labelling" />
+              <Text Name="cmdChange" Descr="Command button labelling" />
+              <Text Name="cmdAbort" Descr="Command button labelling" />
+              <Text Name="cmdRetry" Descr="Command button labelling" />
+              <Text Name="cmdIgnore" Descr="Command button labelling" />
+              <Text Name="cmdActivate" Descr="Command button labelling" />
+              <Text Name="cmdDeactivate" Descr="Command button labelling" />
+              <Text Name="cmdApply" Descr="Command button labelling" />
+              <Text Name="cmdOpen" Descr="Command button labelling" />
+              <Text Name="cmdSave" Descr="Command button labelling" />
+              <Text Name="cmdSaveAs" Descr="Command button labelling" />
+              <Text Name="cmdSearch" Descr="Command button labelling" />
+              <Text Name="cmdBack" Descr="Command button labelling" />
+              <Text Name="cmdForward" Descr="Command button labelling" />
+              <Text Name="cmdLoad" Descr="Command button labelling" />
+              <Text Name="cmdDelete" Descr="Command button labelling" />
+            </Texts>
+          </Group>
+          <Group Name="Recipe">
+            <Texts>
+              <Text Name="capLoadRecipe" Descr="Caption of the dialog 'Load recipe'" />
+              <Text Name="capSaveRecipe" Descr="Caption of the dialog 'Save recipe'" />
+              <Text Name="lblFileName" Descr="Labelling of the input for the recipe name" />
+              <Text Name="lblFileDescription" Descr="Labelling of the input for the  description" />
+              <Text Name="lblExistingFiles" Descr="Labelling of the list of the existing recipes" />
+              <Text Name="ConfirmOverwrite" Descr="Message text when replacing an existing recipe" />
+              <Text Name="ConfirmDelete" Descr="Message text when deleting a recipe" />
+            </Texts>
+          </Group>
+          <Group Name="UserManagement">
+            <Groups>
+              <Group Name="AddGroupSuccess">
+                <Texts>
+                  <Text Name="GroupAlreadyDefined" Descr="Error message when adding a user group. The user group already exists." />
+                  <Text Name="MethodCallFailed" Descr="Error message when adding a user group. Unspecified reason." />
+                  <Text Name="WrongParam" Descr="Error message when adding a user group. Incorrect parameter." />
+                  <Text Name="NoName" Descr="Error message when adding a user group. Unspecified name." />
+                  <Text Name="NoLevel" Descr="Error message when adding a user group. No user level specified." />
+                </Texts>
+              </Group>
+              <Group Name="AddRightSuccess">
+                <Texts>
+                  <Text Name="MethodCallFailed" Descr="Error message when adding a user right. Unspecified reason." />
+                  <Text Name="WrongParam" Descr="Error message when adding a user right. Incorrect parameter." />
+                  <Text Name="NoName" Descr="Error message when adding a user right. Unspecified name." />
+                  <Text Name="RightAlreadyDefined" Descr="Error message when adding a user right. The user right already exists." />
+                </Texts>
+              </Group>
+              <Group Name="AddUserSuccess">
+                <Texts>
+                  <Text Name="ForbiddenPassword" Descr="Error message when adding a user. The password is part of the 'forbidden password list'." />
+                  <Text Name="InvalidPassword" Descr="Error message when adding a user. The password is invalid." />
+                  <Text Name="InvalidPasswordLength" Descr="Error message when adding a user. The password doesn't contain enough characters." />
+                  <Text Name="MethodCallFailed" Descr="Error message when adding a user. Unspecified reason." />
+                  <Text Name="NoCharactersInPassword" Descr="Error message when adding a user. The password doesn't contain letters." />
+                  <Text Name="NoNumbersInPassword" Descr="Error message when adding a user. The password doesn't contain digits." />
+                  <Text Name="PasswordMustContainSpecialCharacters" Descr="Error message when adding a user. The password doesn't contain special characters." />
+                  <Text Name="UnableToSaveUser" Descr="Error message when adding a user. Data cannot be saved." />
+                  <Text Name="UserExists" Descr="Error message when adding a user. The user name already exists." />
+                  <Text Name="NoName" Descr="Error message when adding a user. Unspecified user name." />
+                  <Text Name="NoUserGroup" Descr="Error message when adding a user. Unspecified user group." />
+                  <Text Name="PasswordsNotEqual" Descr="Error message when adding a user. Incorrect password repetition." />
+                  <Text Name="FullUserExists" Descr="Error message when adding a user. The user name already exists." />
+                  <Text Name="MachineCodeExists" Descr="Error message when adding a user. The machine code already exists." />
+                  <Text Name="NoFullName" Descr="Error message when adding a user. The full name already exists." />
+                  <Text Name="LockedPassword" Descr="Error message when adding a user. The password cannot currently be used." />
+                </Texts>
+              </Group>
+              <Group Name="ChangeGroupSuccess">
+                <Texts>
+                  <Text Name="MethodCallFailed" Descr="Error message when changing a user group. Unspecified reason." />
+                  <Text Name="UnknownGroup" Descr="Error message when changing a user group. The specified user group doesn't exist." />
+                  <Text Name="DeleteNotPermitted" Descr="Error message when changing a user group. Deletion not allowed." />
+                </Texts>
+              </Group>
+              <Group Name="ChangePasswordSuccess">
+                <Texts>
+                  <Text Name="CantAccessDomainInfo" Descr="Error message when changing a password. The cross project user administration is not connected." />
+                  <Text Name="ForbiddenPassword" Descr="Error message when changing a password. The password is part of the 'forbidden password list'." />
+                  <Text Name="MethodCallFailed" Descr="Error message when changing a password. Unspecified reason." />
+                  <Text Name="NewPasswordInvalid" Descr="Error message when changing a password. Invalid password." />
+                  <Text Name="NewPasswordInvalidLength" Descr="Error message when changing a password. The password doesn't contain enough characters." />
+                  <Text Name="NoCharactersInPassword" Descr="Error message when changing a password. The password doesn't contain letters." />
+                  <Text Name="NoNumbersInPassword" Descr="Error message when changing a password. The password doesn't contain digits." />
+                  <Text Name="OldPasswordInvalid" Descr="Error message when changing a password. Current used password is wrong." />
+                  <Text Name="PasswordMustContainSpecialCharacters" Descr="Error message when changing a password. The password doesn't contain special characters." />
+                  <Text Name="UnableToSavePassword" Descr="Error message when changing a password. Data cannot be saved." />
+                  <Text Name="UnknownUser" Descr="Error message when changing a password. The user doesn't exist." />
+                  <Text Name="NewPasswordsNotEqual" Descr="Error message when changing a password. Incorrect password repetition." />
+                  <Text Name="NoCurrentUser" Descr="Error message when changing a password. No user logged on." />
+                  <Text Name="LockedPassword" Descr="Error message when changing a password. The password cannot currently be used." />
+                </Texts>
+              </Group>
+              <Group Name="ChangeRightSuccess">
+                <Texts>
+                  <Text Name="MethodCallFailed" Descr="Error message when changing a user right. Unspecified reason." />
+                  <Text Name="UnableToSaveRight" Descr="Error message when changing a user right. Data cannot be saved." />
+                  <Text Name="UnknownRight" Descr="Error message when changing a user right. User right doesn't exist." />
+                  <Text Name="WrongParam" Descr="Error message when changing a user right. Incorrect parameter." />
+                </Texts>
+              </Group>
+              <Group Name="ChangeUserSuccess">
+                <Texts>
+                  <Text Name="ForbiddenPassword" Descr="Error message when changing a user. The password is part of the 'forbidden password list'." />
+                  <Text Name="InvalidPassword" Descr="Error message when changing a user. Invalid password." />
+                  <Text Name="InvalidPasswordLength" Descr="Error message when changing a user. The password doesn't contain enough characters." />
+                  <Text Name="MethodCallFailed" Descr="Error message when changing a user. Unspecified reason." />
+                  <Text Name="NoCharactersInPassword" Descr="Error message when changing a user. The password doesn't contain letters." />
+                  <Text Name="NoNumbersInPassword" Descr="Error message when changing a user. The password doesn't contain digits." />
+                  <Text Name="PasswordMustContainSpecialCharacters" Descr="Error message when changing a user. The password doesn't contain special characters." />
+                  <Text Name="UnableToSaveUser" Descr="Error message when changing a user. Data cannot be saved." />
+                  <Text Name="UnknownUser" Descr="Error message when changing a user. The specified user group doesn't exist." />
+                  <Text Name="UnknownUserClass" Descr="Error message when changing a user. The specified user doesn't exist." />
+                  <Text Name="FullUserExists" Descr="Error message when changing a user. The specified full name already exists." />
+                  <Text Name="MachineCodeExists" Descr="Error message when changing a user. The specified machine code already exists." />
+                  <Text Name="InvalidUserClass" Descr="Error message when changing a user. User group is not allowed for this user." />
+                  <Text Name="LockedPassword" Descr="Error message while processing logon. The cross project user administration is not connected." />
+                </Texts>
+              </Group>
+              <Group Name="LogOnSuccess">
+                <Texts>
+                  <Text Name="CantAccessDomainInfo" Descr="Error message when changing a user. The password cannot currently be used." />
+                  <Text Name="InvalidPassword" Descr="Error message while processing logon. Wrong password." />
+                  <Text Name="PasswordExpired" Descr="Error message while processing logon. Expired password." />
+                  <Text Name="RenewPassword" Descr="Error message while processing logon. Password must be changed." />
+                  <Text Name="TooManyFailedLogOns" Descr="Error message while processing logon. Unknown user." />
+                  <Text Name="UnknownUser" Descr="Error message while processing logon. User is deactivated after too many failed logons." />
+                  <Text Name="UserDeactivated" Descr="Error message while processing logon. User is deactivated." />
+                  <Text Name="MethodCallFailed" Descr="Error message while processing logon. Unspecified reason." />
+                  <Text Name="NoCorrespondingLocalUserClass" Descr="Error message while processing logon. User group defined in central user administration has no counterpart in project." />
+                </Texts>
+              </Group>
+              <Group Name="UserStates">
+                <Texts>
+                  <Text Name="Deactivated" Descr="User state" />
+                  <Text Name="Active" Descr="User state" />
+                  <Text Name="Invalidated" Descr="User state" />
+                  <Text Name="PasswordExpired" Descr="User state" />
+                </Texts>
+              </Group>
+            </Groups>
+            <Texts>
+              <Text Name="capAddRight" Descr="Caption of the dialog 'Add right'" />
+              <Text Name="capAddUser" Descr="Caption of the dialog 'Add user'" />
+              <Text Name="capAddUserGroup" Descr="Caption of the dialog 'Add user group'" />
+              <Text Name="capChangePassword" Descr="Caption of the dialog 'Change password'" />
+              <Text Name="capChangeRight" Descr="Caption of the dialog 'Change right'" />
+              <Text Name="capChangeUser" Descr="Caption of the dialog 'Change user'" />
+              <Text Name="capChangeUserGroup" Descr="Caption of the dialog 'Change user group'" />
+              <Text Name="capLogOn" Descr="Caption of the dialog 'Log on user'" />
+              <Text Name="capRightsOverview" Descr="Caption of the dialog 'Overview rights'" />
+              <Text Name="capUserGroupsOverview" Descr="Caption of the dialog 'Overview user groups'" />
+              <Text Name="capUsersOverview" Descr="Caption of the dialog 'Overview users'" />
+              <Text Name="capVerify" Descr="Caption of the dialog 'Verify user'" />
+              <Text Name="chkDeactivationTimeActive" Descr="Labelling of check box" />
+              <Text Name="chkRightActive" Descr="Labelling of check box" />
+              <Text Name="chkUsersRemovable" Descr="Labelling of check box" />
+              <Text Name="cmdLogOff" Descr="Command button labelling" />
+              <Text Name="cmdLogOn" Descr="Command button labelling" />
+              <Text Name="hdrActive" Descr="Column header labelling" />
+              <Text Name="hdrAutoLogOffTime" Descr="Column header labelling" />
+              <Text Name="hdrCode" Descr="Column header labelling" />
+              <Text Name="hdrComment" Descr="Column header labelling" />
+              <Text Name="hdrDeactivationTime" Descr="Column header labelling" />
+              <Text Name="hdrFullName" Descr="Column header labelling" />
+              <Text Name="hdrMaxFailedLogOns" Descr="Column header labelling" />
+              <Text Name="hdrName" Descr="Column header labelling" />
+              <Text Name="hdrRemainingLogOns" Descr="Column header labelling" />
+              <Text Name="hdrRenewPassword" Descr="Column header labelling" />
+              <Text Name="hdrRenewPasswordInterval" Descr="Column header labelling" />
+              <Text Name="hdrRights" Descr="Column header labelling" />
+              <Text Name="hdrUserGroup" Descr="Column header labelling" />
+              <Text Name="hdrUserGroups" Descr="Column header labelling" />
+              <Text Name="hdrUserName" Descr="Column header labelling" />
+              <Text Name="hdrUsersCount" Descr="Column header labelling" />
+              <Text Name="hdrUsersRemovable" Descr="Column header labelling" />
+              <Text Name="hdrUserState" Descr="Column header labelling" />
+              <Text Name="lblAutoLogOffTime" Descr="Labelling of input box" />
+              <Text Name="lblComment" Descr="Labelling of input box" />
+              <Text Name="lblDeactivation" Descr="Labelling of input box" />
+              <Text Name="lblFullName" Descr="Labelling of input box" />
+              <Text Name="lblMachineCode" Descr="Labelling of input box" />
+              <Text Name="lblMaxFailedLogOns" Descr="Labelling of input box" />
+              <Text Name="lblName" Descr="Labelling of input box" />
+              <Text Name="lblNewPassword" Descr="Labelling of input box" />
+              <Text Name="lblPassword" Descr="Labelling of input box" />
+              <Text Name="lblRenewPasswordInterval" Descr="Labelling of input box" />
+              <Text Name="lblRepeatNewPassword" Descr="Labelling of input box" />
+              <Text Name="lblRepeatPassword" Descr="Labelling of input box" />
+              <Text Name="lblState" Descr="Labelling of input box" />
+              <Text Name="lblUserGroup" Descr="Labelling of input box" />
+              <Text Name="lblUserName" Descr="Labelling of input box" />
+              <Text Name="msgDeactivateUser" Descr="Question text for deactivating a user" />
+              <Text Name="msgRemoveRight" Descr="Question text for removing a user right" />
+              <Text Name="msgRemoveUser" Descr="Question text for removing a user" />
+              <Text Name="msgRemoveUserGroup" Descr="Question text for removing a user group incl. all users" />
+              <Text Name="rbtDeactivationDuration" Descr="Labelling of option box" />
+              <Text Name="rbtDeactivationTime" Descr="Labelling of option box" />
+              <Text Name="rbtNoDeactivation" Descr="Labelling of option box" />
+              <Text Name="untAutoLogOffTime" Descr="Unit text for input box" />
+              <Text Name="untDays" Descr="Unit text for input box" />
+              <Text Name="untHours" Descr="Unit text for input box" />
+              <Text Name="untMinutes" Descr="Unit text for input box" />
+              <Text Name="untRenewPasswordInterval" Descr="Unit text for input box" />
+              <Text Name="chkChangePassword" Descr="Labelling of check box" />
+              <Text Name="chkChangeMachineCode" Descr="Labelling of check box" />
+              <Text Name="tpgStandard" Descr="Tab labelling" />
+              <Text Name="tpgExtended" Descr="Tab labelling" />
+              <Text Name="vinAuthorizationLevel" Descr="Labelling of input box" />
+              <Text Name="hdrAuthorizationLevel" Descr="Column header labelling" />
+              <Text Name="capSelectRight" Descr="Caption of the dialog 'Select right'" />
+            </Texts>
+          </Group>
+          <Group Name="TouchKeyboards">
+            <Groups>
+              <Group Name="AlphaPad">
+                <Texts>
+                  <Text Name="Caption" Descr="Caption of keyboard form" />
+                  <Text Name="keyEsc" Descr="Esc key" />
+                  <Text Name="keyDel" Descr="Del key" />
+                  <Text Name="keyCtrl" Descr="Ctrl key" />
+                  <Text Name="keyAltGr" Descr="Alt Gr key" />
+                  <Text Name="keyHome" Descr="Home key" />
+                  <Text Name="keyEnd" Descr="End key" />
+                  <Text Name="key00" Descr="1. row from top, 1. key from left" />
+                  <Text Name="key01" Descr="1. row from top, 2. key from left" />
+                  <Text Name="key02" Descr="1. row from top, 3. key from left" />
+                  <Text Name="key03" Descr="1. row from top, 4. key from left" />
+                  <Text Name="key04" Descr="1. row from top, 5. key from left" />
+                  <Text Name="key05" Descr="1. row from top, 6. key from left" />
+                  <Text Name="key06" Descr="1. row from top, 7. key from left" />
+                  <Text Name="key07" Descr="1. row from top, 8. key from left" />
+                  <Text Name="key08" Descr="1. row from top, 9. key from left" />
+                  <Text Name="key09" Descr="1. row from top, 10. key from left" />
+                  <Text Name="key010" Descr="1. row from top, 11. key from left" />
+                  <Text Name="key011" Descr="1. row from top, 12. key from left" />
+                  <Text Name="key012" Descr="1. row from top, 13. key from left" />
+                  <Text Name="key10" Descr="2. row from top, 1. key from left" />
+                  <Text Name="key11" Descr="2. row from top, 2. key from left" />
+                  <Text Name="key12" Descr="2. row from top, 3. key from left" />
+                  <Text Name="key13" Descr="2. row from top, 4. key from left" />
+                  <Text Name="key14" Descr="2. row from top, 5. key from left" />
+                  <Text Name="key15" Descr="2. row from top, 6. key from left" />
+                  <Text Name="key16" Descr="2. row from top, 7. key from left" />
+                  <Text Name="key17" Descr="2. row from top, 8. key from left" />
+                  <Text Name="key18" Descr="2. row from top, 9. key from left" />
+                  <Text Name="key19" Descr="2. row from top, 10. key from left" />
+                  <Text Name="key110" Descr="2. row from top, 11. key from left" />
+                  <Text Name="key111" Descr="2. row from top, 12. key from left" />
+                  <Text Name="key20" Descr="3. row from top, 1. key from left" />
+                  <Text Name="key21" Descr="3. row from top, 2. key from left" />
+                  <Text Name="key22" Descr="3. row from top, 3. key from left" />
+                  <Text Name="key23" Descr="3. row from top, 4. key from left" />
+                  <Text Name="key24" Descr="3. row from top, 5. key from left" />
+                  <Text Name="key25" Descr="3. row from top, 6. key from left" />
+                  <Text Name="key26" Descr="3. row from top, 7. key from left" />
+                  <Text Name="key27" Descr="3. row from top, 8. key from left" />
+                  <Text Name="key28" Descr="3. row from top, 9. key from left" />
+                  <Text Name="key29" Descr="3. row from top, 10. key from left" />
+                  <Text Name="key210" Descr="3. row from top, 11. key from left" />
+                  <Text Name="key211" Descr="3. row from top, 12. key from left" />
+                  <Text Name="key30" Descr="4. row from top, 1. key from left" />
+                  <Text Name="key31" Descr="4. row from top, 2. key from left" />
+                  <Text Name="key32" Descr="4. row from top, 3. key from left" />
+                  <Text Name="key33" Descr="4. row from top, 4. key from left" />
+                  <Text Name="key34" Descr="4. row from top, 5. key from left" />
+                  <Text Name="key35" Descr="4. row from top, 6. key from left" />
+                  <Text Name="key36" Descr="4. row from top, 7. key from left" />
+                  <Text Name="key37" Descr="4. row from top, 8. key from left" />
+                  <Text Name="key38" Descr="4. row from top, 9. key from left" />
+                  <Text Name="key39" Descr="4. row from top, 10. key from left" />
+                  <Text Name="key310" Descr="4. row from top, 11. key from left" />
+                </Texts>
+              </Group>
+              <Group Name="NumPad">
+                <Texts>
+                  <Text Name="Caption" />
+                  <Text Name="keyDel" />
+                  <Text Name="keyEnd" />
+                  <Text Name="keyEsc" />
+                  <Text Name="keyHome" />
+                </Texts>
+              </Group>
+              <Group Name="TinyAlphaPad">
+                <Texts>
+                  <Text Name="cmd01Caption" />
+                  <Text Name="cmd01Chars" />
+                  <Text Name="cmd01CaptionShift" />
+                  <Text Name="cmd01CharsShift" />
+                  <Text Name="cmd02Caption" />
+                  <Text Name="cmd02Chars" />
+                  <Text Name="cmd02CaptionShift" />
+                  <Text Name="cmd02CharsShift" />
+                  <Text Name="cmd03Caption" />
+                  <Text Name="cmd03Chars" />
+                  <Text Name="cmd03CaptionShift" />
+                  <Text Name="cmd03CharsShift" />
+                  <Text Name="cmd04Caption" />
+                  <Text Name="cmd04Chars" />
+                  <Text Name="cmd04CaptionShift" />
+                  <Text Name="cmd04CharsShift" />
+                  <Text Name="cmd05Caption" />
+                  <Text Name="cmd05Chars" />
+                  <Text Name="cmd05CaptionShift" />
+                  <Text Name="cmd05CharsShift" />
+                  <Text Name="cmd06Caption" />
+                  <Text Name="cmd06Chars" />
+                  <Text Name="cmd06CaptionShift" />
+                  <Text Name="cmd06CharsShift" />
+                  <Text Name="cmd07Caption" />
+                  <Text Name="cmd07Chars" />
+                  <Text Name="cmd07CaptionShift" />
+                  <Text Name="cmd07CharsShift" />
+                  <Text Name="cmd08Caption" />
+                  <Text Name="cmd08Chars" />
+                  <Text Name="cmd08CaptionShift" />
+                  <Text Name="cmd08CharsShift" />
+                  <Text Name="cmd09Caption" />
+                  <Text Name="cmd09Chars" />
+                  <Text Name="cmd09CaptionShift" />
+                  <Text Name="cmd09CharsShift" />
+                  <Text Name="cmd10Caption" />
+                  <Text Name="cmd10Chars" />
+                  <Text Name="cmd10CaptionShift" />
+                  <Text Name="cmd10CharsShift" />
+                  <Text Name="cmd11Caption" />
+                  <Text Name="cmd11Chars" />
+                  <Text Name="cmd11CaptionShift" />
+                  <Text Name="cmd11CharsShift" />
+                  <Text Name="cmd12Caption" />
+                  <Text Name="cmd12Chars" />
+                  <Text Name="cmd12CaptionShift" />
+                  <Text Name="cmd12CharsShift" />
+                  <Text Name="cmd13Caption" />
+                  <Text Name="cmd13Chars" />
+                  <Text Name="cmd13CaptionShift" />
+                  <Text Name="cmd13CharsShift" />
+                  <Text Name="cmd14Caption" />
+                  <Text Name="cmd14Chars" />
+                  <Text Name="cmd14CaptionShift" />
+                  <Text Name="cmd14CharsShift" />
+                  <Text Name="cmd15Caption" />
+                  <Text Name="cmd15Chars" />
+                  <Text Name="cmd15CaptionShift" />
+                  <Text Name="cmd15CharsShift" />
+                  <Text Name="cmd01Password" />
+                  <Text Name="cmd02Password" />
+                  <Text Name="cmd03Password" />
+                  <Text Name="cmd04Password" />
+                  <Text Name="cmd05Password" />
+                  <Text Name="cmd06Password" />
+                  <Text Name="cmd07Password" />
+                  <Text Name="cmd08Password" />
+                  <Text Name="cmd09Password" />
+                  <Text Name="cmd10Password" />
+                  <Text Name="cmd11Password" />
+                  <Text Name="cmd12Password" />
+                  <Text Name="cmd13Password" />
+                  <Text Name="cmd14Password" />
+                  <Text Name="cmd15Password" />
+                  <Text Name="cmdShift" Descr="Labelling of the Shift key which activates the three different input levels" />
+                  <Text Name="cmdShiftPassword" Descr="Labelling of the Shift key within password mode which activates the three different input levels" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+          <Group Name="Printing">
+            <Groups>
+              <Group Name="Progress">
+                <Texts>
+                  <Text Name="Caption" Descr="Printing" />
+                  <Text Name="Ready" Descr="Ready" />
+                  <Text Name="PageNumber" Descr="Page @1n@ of @2n@" />
+                  <Text Name="Loading" Descr="Loading document(s)" />
+                  <Text Name="Cancelling" Descr="Cancel printing ..." />
+                  <Text Name="Printing" Descr="Printing '@1s@' ..." />
+                  <Text Name="PrintScreen" Descr="Printing screen" />
+                </Texts>
+              </Group>
+              <Group Name="Settings">
+                <Texts>
+                  <Text Name="Caption" Descr="Settings for default printer" />
+                  <Text Name="Printer" Descr="Printer" />
+                  <Text Name="Type" Descr="Type" />
+                  <Text Name="Port" Descr="Port / Network path" />
+                  <Text Name="Color" Descr="Color" />
+                  <Text Name="PageSettings" Descr="Page settings" />
+                  <Text Name="PaperSize" Descr="Paper size" />
+                  <Text Name="Orientation" Descr="Orientation" />
+                  <Text Name="Portrait" Descr="Portrait" />
+                  <Text Name="Landscape" Descr="Landscape" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+        </Groups>
+      </Group>
+      <Group Name="AlarmSystem">
+        <Groups>
+          <Group Name="Classes">
+            <Groups>
+              <Group Name="SystemAlarm">
+                <Texts>
+                  <Text Name="Active" />
+                  <Text Name="ActiveAck" />
+                  <Text Name="Inactive" />
+                  <Text Name="InactiveAck" />
+                </Texts>
+              </Group>
+              <Group Name="Alarm">
+                <Texts>
+                  <Text Name="Active" />
+                  <Text Name="ActiveAck" />
+                  <Text Name="Inactive" />
+                  <Text Name="InactiveAck" />
+                </Texts>
+              </Group>
+              <Group Name="Message">
+                <Texts>
+                  <Text Name="Active" />
+                  <Text Name="ActiveAck" />
+                  <Text Name="Inactive" />
+                  <Text Name="InactiveAck" />
+                </Texts>
+              </Group>
+              <Group Name="Hint">
+                <Texts>
+                  <Text Name="Active" />
+                  <Text Name="ActiveAck" />
+                  <Text Name="Inactive" />
+                  <Text Name="InactiveAck" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+          <Group Name="Types">
+            <Groups>
+              <Group Name="ValueAlarms" />
+              <Group Name="BitBlockAlarms" />
+            </Groups>
+          </Group>
+          <Group Name="Groups">
+            <Groups>
+              <Group Name="SystemAlarms">
+                <Texts>
+                  <Text Name="Collective" />
+                  <Text Name="Collective_Txt" />
+                  <Text Name="DataAccess" />
+                  <Text Name="DataAccess_Txt" />
+                  <Text Name="LanguageSwitching" />
+                  <Text Name="LanguageSwitching_Txt" />
+                  <Text Name="Project" />
+                  <Text Name="Project_Txt" />
+                  <Text Name="Alarm" />
+                  <Text Name="Alarm_Txt" />
+                  <Text Name="Recipe" />
+                  <Text Name="Recipe_Txt" />
+                  <Text Name="UserManagement" />
+                  <Text Name="UserManagement_Txt" />
+                  <Text Name="Trend" />
+                  <Text Name="Trend_Txt" />
+                  <Text Name="Logging" />
+                  <Text Name="Logging_Txt" />
+                  <Text Name="Forms" />
+                  <Text Name="Forms_Txt" />
+                  <Text Name="Drivers" />
+                  <Text Name="Drivers_Txt" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+        </Groups>
+      </Group>
+      <Group Name="ItemSystem">
+        <Groups>
+          <Group Name="Intern">
+            <Texts>
+              <Text Name="__CURRENT_USER.NAME" />
+              <Text Name="__CURRENT_USER.FULLNAME" />
+              <Text Name="__CURRENT_USER.GROUPNAME" />
+              <Text Name="__CURRENT_USER.GROUPTEXT" />
+              <Text Name="__CURRENT_USER.LEVEL" />
+              <Text Name="__CURRENT_USER.SECONDS_TO_AUTOLOGOFF" />
+              <Text Name="__PROCESS.MEMORY.AVAILABLE" />
+              <Text Name="__PROCESS.MEMORY.ESTIMATEDMANAGED" />
+              <Text Name="__PROCESS.MEMORY.USED" />
+              <Text Name="__SYSTEM.MEMORY.PERCENTLOAD" />
+              <Text Name="__SYSTEM.MEMORY.PHYSICAL" />
+              <Text Name="__SYSTEM.TIME" />
+              <Text Name="__SYSTEM_ERRORS.COLLECTIVE" />
+              <Text Name="__SYSTEM_ERRORS.DATA_ACCESS" />
+              <Text Name="__SYSTEM_ERRORS.LANGUAGE_SWITCHING" />
+              <Text Name="__SYSTEM_ERRORS.PROJECT" />
+              <Text Name="__SYSTEM_ERRORS.ALARM" />
+              <Text Name="__SYSTEM_ERRORS.RECIPE" />
+              <Text Name="__SYSTEM_ERRORS.USER_MANAGEMENT" />
+              <Text Name="__SYSTEM_ERRORS.TREND" />
+              <Text Name="__SYSTEM_ERRORS.LOGGING" />
+              <Text Name="__SYSTEM_ERRORS.FORMS" />
+              <Text Name="__SYSTEM_ERRORS.DRIVERS" />
+            </Texts>
+          </Group>
+          <Group Name="Structures">
+          </Group>
+          <Group Name="Ch1">
+            <Texts>
+              <Text Name="Ergo_PLC.g_stBars_X.bDriveError" />
+              <Text Name="Ergo_PLC.g_stBars_X.bDriveIsEnabled" />
+              <Text Name="Ergo_PLC.g_stBars_X.bEnable" />
+              <Text Name="Ergo_PLC.g_stBars_X.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stBars_X.bHMI_HomeAxis" />
+              <Text Name="Ergo_PLC.g_stBars_X.bHomePosAvailable" />
+              <Text Name="Ergo_PLC.g_stBars_X.bManualNegative" />
+              <Text Name="Ergo_PLC.g_stBars_X.bManualPositive" />
+              <Text Name="Ergo_PLC.g_stBars_X.bNegLimitSwPositive" />
+              <Text Name="Ergo_PLC.g_stBars_X.bPosExecute" />
+              <Text Name="Ergo_PLC.g_stBars_X.bResetError" />
+              <Text Name="Ergo_PLC.g_stBars_X.rActualPosition" />
+              <Text Name="Ergo_PLC.g_stBars_X.rTargetPosition" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bDriveError" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bDriveIsEnabled" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bEnable" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bHMI_HomeAxis" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bHomePosAvailable" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bManualNegative" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bManualPositive" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bNegLimitSwPositive" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bPosExecute" />
+              <Text Name="Ergo_PLC.g_stBars_Y.bResetError" />
+              <Text Name="Ergo_PLC.g_stBars_Y.rActualPosition" />
+              <Text Name="Ergo_PLC.g_stBars_Y.rTargetPosition" />
+              <Text Name="Ergo_PLC.g_stCrank.bDriveError" />
+              <Text Name="Ergo_PLC.g_stCrank.bDriveIsEnabled" />
+              <Text Name="Ergo_PLC.g_stCrank.bEnableClutchTorque" />
+              <Text Name="Ergo_PLC.g_stCrank.bEnableRecording" />
+              <Text Name="Ergo_PLC.g_stCrank.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stCrank.bManualNegative" />
+              <Text Name="Ergo_PLC.g_stCrank.bManualPositive" />
+              <Text Name="Ergo_PLC.g_stCrank.bResetError" />
+              <Text Name="Ergo_PLC.g_stCrank.bTorqueEnabled" />
+              <Text Name="Ergo_PLC.g_stCrank.byDriveNode" />
+              <Text Name="Ergo_PLC.g_stCrank.iSamplingFrequency_Hertz" />
+              <Text Name="Ergo_PLC.g_stCrank.iSamplingFrequency_ms" />
+              <Text Name="Ergo_PLC.g_stCrank.nActualTorque" />
+              <Text Name="Ergo_PLC.g_stCrank.nTargetGenTorque" />
+              <Text Name="Ergo_PLC.g_stCrank.nTargetMotTorque" />
+              <Text Name="Ergo_PLC.g_stCrank.nTargetSpeed" />
+              <Text Name="Ergo_PLC.g_stCrank.rActualSpeed" />
+              <Text Name="Ergo_PLC.g_stCrank.rChainRingSize" />
+              <Text Name="Ergo_PLC.g_stCrank.rCogSize" />
+              <Text Name="Ergo_PLC.g_stCrank.rCountForFiveMin" />
+              <Text Name="Ergo_PLC.g_stCrank.rFactorMaxTorqueAnalogInput" />
+              <Text Name="Ergo_PLC.g_stCrank.rFactorScalingC0011" />
+              <Text Name="Ergo_PLC.g_stCrank.rMaxRpmMotorSpeed" />
+              <Text Name="Ergo_PLC.g_stCrank.rTimerCount" />
+              <Text Name="Ergo_PLC.g_stCrank.rTransmissionFactor" />
+              <Text Name="Ergo_PLC.g_stCrank.sUserFileName" />
+              <Text Name="Ergo_PLC.g_stCrank.sUserName" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[0]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[1]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[10]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[2]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[3]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[4]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[5]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[6]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[7]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[8]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetClosedLoopTorque_Nm[9]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[0]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[1]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[10]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[2]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[3]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[4]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[5]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[6]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[7]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[8]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.arSetConstantPower_W[9]" />
+              <Text Name="Ergo_PLC.g_stCrankControl.eMode" />
+              <Text Name="Ergo_PLC.g_stCrankControl.eTelemetrySource" />
+              <Text Name="Ergo_PLC.g_stCrankControl.iPowerSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.iTorqueSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.rDgain" />
+              <Text Name="Ergo_PLC.g_stCrankControl.rFFWGain" />
+              <Text Name="Ergo_PLC.g_stCrankControl.rIgain" />
+              <Text Name="Ergo_PLC.g_stCrankControl.rPgain" />
+              <Text Name="Ergo_PLC.g_stCrankControl.rSetConstantPower_W" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xConstantPowerReached" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xDecPowerSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xDecTorqueSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xIncPowerSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xIncTorqueSelection" />
+              <Text Name="Ergo_PLC.g_stCrankControl.xRegisterCrankEncoder" />
+              <Text Name="Ergo_PLC.g_stCrankData.rCadence_degps" />
+              <Text Name="Ergo_PLC.g_stCrankData.rCadence_rpm" />
+              <Text Name="Ergo_PLC.g_stCrankData.rLeftForce_N" />
+              <Text Name="Ergo_PLC.g_stCrankData.rLeftTorque_Nm" />
+              <Text Name="Ergo_PLC.g_stCrankData.rPosition_deg" />
+              <Text Name="Ergo_PLC.g_stCrankData.rRightForce_N" />
+              <Text Name="Ergo_PLC.g_stCrankData.rRightTorque_Nm" />
+              <Text Name="Ergo_PLC.g_stCrankData.rTotalPower_W" />
+              <Text Name="Ergo_PLC.g_stCrankData.rTotalPowerBalance_pc" />
+              <Text Name="Ergo_PLC.g_stCrankData.rUsefulPowerBalance_pc" />
+              <Text Name="Ergo_PLC.g_stCrankData.rWastedPowerBalance_pc" />
+              <Text Name="Ergo_PLC.g_stCrankEncoder.rDistance_deg" />
+              <Text Name="Ergo_PLC.g_stCrankEncoder.rPosition_deg" />
+              <Text Name="Ergo_PLC.g_stMachine.bAllAxesRequireDatum" />
+              <Text Name="Ergo_PLC.g_stMachine.bDatumAllAxes" />
+              <Text Name="Ergo_PLC.g_stMachine.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stMachine.bPositionAllAxes" />
+              <Text Name="Ergo_PLC.g_stMachine.bResetAllAxes" />
+              <Text Name="Ergo_PLC.g_stMachine.sUserMessage" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bDriveError" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bDriveIsEnabled" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bEnable" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bHMI_HomeAxis" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bHomePosAvailable" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bManualNegative" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bManualPositive" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bNegLimitSwPositive" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bPosExecute" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.bResetError" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.rActualPosition" />
+              <Text Name="Ergo_PLC.g_stSaddle_X.rTargetPosition" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bDriveError" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bDriveIsEnabled" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bEnable" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bEstopOK" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bHMI_HomeAxis" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bHomePosAvailable" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bManualNegative" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bManualPositive" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bNegLimitSwPositive" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bPosExecute" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.bResetError" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.rActualPosition" />
+              <Text Name="Ergo_PLC.g_stSaddle_Y.rTargetPosition" />
+              <Text Name="Ergo_PLC.g_iSetCrankGenTrq_a" />
+              <Text Name="Ergo_PLC.g_iSetCrankMotTrq_a" />
+              <Text Name="Ergo_PLC.g_iSetCrankSpeed_a" />
+              <Text Name="Ergo_PLC.g_xApplyTorque" />
+              <Text Name="Ergo_PLC.g_xCrankFwd" />
+              <Text Name="Ergo_PLC.g_xCrankRev" />
+              <Text Name="Ergo_PLC.g_stCrankData.rCadence_rad" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[0]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[1]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[10]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[2]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[3]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[4]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[5]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[6]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[7]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[8]" />
+              <Text Name="Ergo_PLC.g_stUIData.arCogSizes[9]" />
+              <Text Name="Ergo_PLC.g_stUIData.iDistance" />
+              <Text Name="Ergo_PLC.g_stUIData.iSpeed" />
+              <Text Name="Ergo_PLC.g_stUIData.iTorqueAverage" />
+              <Text Name="Ergo_PLC.g_stUIData.iWheelDimention" />
+              <Text Name="Ergo_PLC.g_stUIData.rCadenceAverage" />
+              <Text Name="Ergo_PLC.g_stUIData.rGearRatio" />
+              <Text Name="Ergo_PLC.g_stUIData.rPowerAverage" />
+              <Text Name="Ergo_PLC.g_stUIData.xCrank1stScan" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rDDef" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rDMax" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rDMin" />
+              <Text Name="Ergo_PLC.g_stPID_CL.RIDef" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rIMax" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rIMin" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rPDef" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rPMax" />
+              <Text Name="Ergo_PLC.g_stPID_CL.rPMin" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rDDef" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rDMax" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rDMin" />
+              <Text Name="Ergo_PLC.g_stPID_CP.RIDef" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rIMax" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rIMin" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rPDef" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rPMax" />
+              <Text Name="Ergo_PLC.g_stPID_CP.rPMin" />
+              <Text Name="Ergo_PLC.g_stUIData.xGeometryTest" />
+            </Texts>
+          </Group>
+        </Groups>
+      </Group>
+      <Group Name="UserSystem">
+        <Groups>
+          <Group Name="UserGroups" />
+          <Group Name="Rights" />
+        </Groups>
+      </Group>
+      <Group Name="ArchiveSystem" />
+      <Group Name="LoggingSystem">
+        <Groups>
+          <Group Name="Project">
+            <Groups>
+              <Group Name="Start">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="ProjectName" />
+                  <Text Name="Success" />
+                </Texts>
+              </Group>
+              <Group Name="Stop">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="ProjectName" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+          <Group Name="UserSystem">
+            <Groups>
+              <Group Name="LogOn">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                </Texts>
+              </Group>
+              <Group Name="LogOff">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                </Texts>
+              </Group>
+              <Group Name="AutoLogOff">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                </Texts>
+              </Group>
+              <Group Name="VerifyUser">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                </Texts>
+              </Group>
+              <Group Name="AddUser">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                </Texts>
+              </Group>
+              <Group Name="RemoveUser">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                </Texts>
+              </Group>
+              <Group Name="ChangeUser">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="PrevGroupName" />
+                  <Text Name="PrevGroupText" />
+                  <Text Name="NewGroupName" />
+                  <Text Name="NewGroupText" />
+                </Texts>
+              </Group>
+              <Group Name="ChangeUserState">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                  <Text Name="PreviousState" />
+                  <Text Name="NewState" />
+                  <Text Name="PreviousStateText" />
+                  <Text Name="NewStateText" />
+                </Texts>
+              </Group>
+              <Group Name="ChangeUserPolicy">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="PrevMinimumLength" />
+                  <Text Name="NewMinimumLength" />
+                  <Text Name="PrevMaximumLength" />
+                  <Text Name="NewMaximumLength" />
+                </Texts>
+              </Group>
+              <Group Name="ChangePassword">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="User" />
+                  <Text Name="FullName" />
+                </Texts>
+              </Group>
+              <Group Name="ChangePasswordPolicy">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="PrevMinimumLength" />
+                  <Text Name="NewMinimumLength" />
+                  <Text Name="PrevMaximumLength" />
+                  <Text Name="NewMaximumLength" />
+                  <Text Name="NewMustContainLetters" />
+                  <Text Name="NewMustContainDigits" />
+                  <Text Name="NewMustContainSpecialCharacters" />
+                  <Text Name="NewMustContainUpperandLowerCase" />
+                  <Text Name="PrevMaximumSubsequentEqualChars" />
+                  <Text Name="NewMaximumSubsequentEqualChars" />
+                  <Text Name="PrevMinimumDifferentChars" />
+                  <Text Name="NewMinimumDifferentChars" />
+                  <Text Name="PrevMinimumDiffCharsToPriorPW" />
+                  <Text Name="NewMinimumDiffCharsToPriorPW" />
+                  <Text Name="PrevPasswordAgingCount" />
+                  <Text Name="NewPasswordAgingCount" />
+                  <Text Name="PrevPasswordAgingTime" />
+                  <Text Name="NewPasswordAgingTime" />
+                  <Text Name="PrevForbiddenPasswords" />
+                  <Text Name="NewForbiddenPasswords" />
+                  <Text Name="NewUserNameUnequalPassword" />
+                </Texts>
+              </Group>
+              <Group Name="AddGroup">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                  <Text Name="Rights" />
+                  <Text Name="UsersRemovable" />
+                  <Text Name="AutoLogOffTime" />
+                  <Text Name="RenewPasswordInterval" />
+                  <Text Name="RenewPasswordHintTime" />
+                  <Text Name="MaxFailedLogOns" />
+                  <Text Name="UserExclusionTime" />
+                  <Text Name="ExcludeInactiveUserTime" />
+                  <Text Name="ProposeLastUserTime" />
+                  <Text Name="MinimumPasswordAge" />
+                </Texts>
+              </Group>
+              <Group Name="ChangeGroup">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                  <Text Name="PrevRights" />
+                  <Text Name="NewRights" />
+                  <Text Name="NewUsersRemovable" />
+                  <Text Name="PrevAutoLogOffTime" />
+                  <Text Name="NewAutoLogOffTime" />
+                  <Text Name="PrevRenewPasswordInterval" />
+                  <Text Name="NewRenewPasswordInterval" />
+                  <Text Name="PrevRenewPasswordHintTime" />
+                  <Text Name="NewRenewPasswordHintTime" />
+                  <Text Name="PrevMaxFailedLogOns" />
+                  <Text Name="NewMaxFailedLogOns" />
+                  <Text Name="PrevUserExclusionTime" />
+                  <Text Name="NewUserExclusionTime" />
+                  <Text Name="PrevExcludeInactiveUserTime" />
+                  <Text Name="NewExcludeInactiveUserTime" />
+                  <Text Name="PrevProposeLastUserTime" />
+                  <Text Name="NewProposeLastUserTime" />
+                  <Text Name="PrevMinimumPasswordAge" />
+                  <Text Name="NewMinimumPasswordAge" />
+                </Texts>
+              </Group>
+              <Group Name="RemoveGroup">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="GroupName" />
+                  <Text Name="GroupText" />
+                </Texts>
+              </Group>
+              <Group Name="AddRight">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="RightName" />
+                  <Text Name="RightText" />
+                </Texts>
+              </Group>
+              <Group Name="RemoveRight">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="RightName" />
+                  <Text Name="RightText" />
+                </Texts>
+              </Group>
+              <Group Name="ActivateRight">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="RightName" />
+                  <Text Name="RightText" />
+                </Texts>
+              </Group>
+              <Group Name="DeactivateRight">
+                <Texts>
+                  <Text Name="LogText" />
+                  <Text Name="RightName" />
+                  <Text Name="RightText" />
+                </Texts>
+              </Group>
+            </Groups>
+          </Group>
+        </Groups>
+      </Group>
+    </TextSystem>
+    <FontSystem>
+      <Fonts>
+        <Font Name="Tahoma8" />
+        <Font Name="Tahoma8Bold" Bold="-1" />
+        <Font Name="Tahoma10" Size="9.75" />
+        <Font Name="Tahoma10Bold" Size="9.75" Bold="-1" />
+        <Font Name="Tahoma12" Size="12" />
+        <Font Name="Tahoma12Bold" Size="12" Bold="-1" />
+      </Fonts>
+      <FontClasses>
+        <FontClass Name="Captions" Def="1031" L1031="Tahoma8Bold" L1033="Tahoma8Bold" />
+        <FontClass Name="CaptionsLarge" Def="1031" L1031="Tahoma12Bold" L1033="Tahoma12Bold" />
+        <FontClass Name="Labels" Def="1031" L1031="Tahoma8" L1033="Tahoma8" />
+        <FontClass Name="Buttons" Def="1031" L1031="Tahoma8" L1033="Tahoma8" />
+        <FontClass Name="Inputs" Def="1031" L1031="Tahoma8" L1033="Tahoma8" />
+        <FontClass Name="InputsLarge" Def="1031" L1031="Tahoma10" L1033="Tahoma10" />
+        <FontClass Name="Lists" Def="1031" L1031="Tahoma8" L1033="Tahoma8" />
+      </FontClasses>
+    </FontSystem>
+  </LanguageSwitching>
+</VisiWinNETProjectFile>
